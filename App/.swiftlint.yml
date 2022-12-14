@@ -1,0 +1,12 @@
+disabled_rules:
+- line_length
+- trailing_whitespace
+
+excluded:
+- build
+- Pods
+
+vertical_whitespace:
+  severity: error
+trailing_newline:
+  severity: error

@@ -109,7 +109,6 @@ class TabCoordinator: NSObject, TabCoordinatorProtocol {
         return navController
     }
 
-
     func selectPage(_ page: TabBarPage) {
         tabBarController.selectedIndex = page.pageOrderNumber()
     }
