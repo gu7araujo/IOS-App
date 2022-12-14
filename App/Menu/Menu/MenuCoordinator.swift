@@ -5,12 +5,12 @@
 //  Created by Gustavo Araujo Santos on 13/12/22.
 //
 
-import Shared
 import UIKit
+import Shared
 
 public class MenuCoordinator: CoordinatorProtocol {
 
-    public var finishDelegate: CoordinatorFinishDelegate?
+    weak public var finishDelegate: CoordinatorFinishDelegate?
     public var navigationController: UINavigationController
     public var childCoordinators: [CoordinatorProtocol] = []
     public var type: CoordinatorType = .menu

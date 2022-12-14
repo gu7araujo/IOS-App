@@ -10,7 +10,7 @@ import Shared
 
 class AppCoordinator: CoordinatorProtocol {
 
-    var finishDelegate: CoordinatorFinishDelegate? = nil
+    weak var finishDelegate: CoordinatorFinishDelegate? = nil
     var navigationController: UINavigationController
     var childCoordinators = [CoordinatorProtocol]()
     var type: CoordinatorType = .app

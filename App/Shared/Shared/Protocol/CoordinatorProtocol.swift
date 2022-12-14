@@ -13,10 +13,10 @@ public protocol CoordinatorProtocol: AnyObject {
     var childCoordinators: [CoordinatorProtocol] { get set }
     var type: CoordinatorType { get }
 
+    init(_ navigationController: UINavigationController)
+
     func start()
     func finish()
-
-    init(_ navigationController: UINavigationController)
 }
 
 public extension CoordinatorProtocol {
@@ -26,7 +26,7 @@ public extension CoordinatorProtocol {
     }
 }
 
-public protocol CoordinatorFinishDelegate {
+public protocol CoordinatorFinishDelegate: AnyObject {
     func coordinatorDidFinish(childCoordinator: CoordinatorProtocol)
 }
 

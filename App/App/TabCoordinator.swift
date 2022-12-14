@@ -61,7 +61,7 @@ protocol TabCoordinatorProtocol: CoordinatorProtocol {
 class TabCoordinator: NSObject, TabCoordinatorProtocol {
 
     var tabBarController: UITabBarController
-    var finishDelegate: CoordinatorFinishDelegate?
+    weak var finishDelegate: CoordinatorFinishDelegate?
     var navigationController: UINavigationController
     var childCoordinators: [CoordinatorProtocol] = []
     var type: CoordinatorType = .tab
@@ -84,10 +84,8 @@ class TabCoordinator: NSObject, TabCoordinatorProtocol {
         tabBarController.delegate = self
         tabBarController.setViewControllers(tabControllers, animated: true)
         tabBarController.selectedIndex = TabBarPage.home.pageOrderNumber()
-        tabBarController.tabBar.isTranslucent = false
-        tabBarController.tabBar.backgroundColor = .red
-        tabBarController.tabBar.tintColor = .red
-        tabBarController.tabBar.barTintColor = .red
+        tabBarController.tabBar.backgroundColor = .lightGray
+        tabBarController.tabBar.tintColor = .white
         navigationController.viewControllers = [tabBarController]
     }
 

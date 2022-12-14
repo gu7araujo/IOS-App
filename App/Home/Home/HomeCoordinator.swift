@@ -10,7 +10,7 @@ import Shared
 
 public class HomeCoordinator: CoordinatorProtocol {
 
-    public var finishDelegate: CoordinatorFinishDelegate?
+    weak public var finishDelegate: CoordinatorFinishDelegate?
     public var navigationController: UINavigationController
     public var childCoordinators: [CoordinatorProtocol] = []
     public var type: CoordinatorType = .home
