@@ -7,9 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B73A2FDC29494D5D002C08C9 /* CoordinatorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = B73A2FDB29494D5D002C08C9 /* CoordinatorProtocol.swift */; };
 		B796F9E92948FFD700910A0A /* Shared.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B796F9E02948FFD600910A0A /* Shared.framework */; };
 		B796F9EE2948FFD700910A0A /* SharedTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B796F9ED2948FFD700910A0A /* SharedTests.swift */; };
-		B796F9EF2948FFD700910A0A /* Shared.h in Headers */ = {isa = PBXBuildFile; fileRef = B796F9E32948FFD600910A0A /* Shared.h */; settings = {ATTRIBUTES = (Public, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -23,8 +23,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		B73A2FDB29494D5D002C08C9 /* CoordinatorProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoordinatorProtocol.swift; sourceTree = "<group>"; };
 		B796F9E02948FFD600910A0A /* Shared.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Shared.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		B796F9E32948FFD600910A0A /* Shared.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Shared.h; sourceTree = "<group>"; };
 		B796F9E82948FFD700910A0A /* SharedTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SharedTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B796F9ED2948FFD700910A0A /* SharedTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SharedTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -48,6 +48,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		B73A2FDA29494D47002C08C9 /* Protocol */ = {
+			isa = PBXGroup;
+			children = (
+				B73A2FDB29494D5D002C08C9 /* CoordinatorProtocol.swift */,
+			);
+			path = Protocol;
+			sourceTree = "<group>";
+		};
 		B796F9D62948FFD600910A0A = {
 			isa = PBXGroup;
 			children = (
@@ -69,7 +77,7 @@
 		B796F9E22948FFD600910A0A /* Shared */ = {
 			isa = PBXGroup;
 			children = (
-				B796F9E32948FFD600910A0A /* Shared.h */,
+				B73A2FDA29494D47002C08C9 /* Protocol */,
 			);
 			path = Shared;
 			sourceTree = "<group>";
@@ -89,7 +97,6 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B796F9EF2948FFD700910A0A /* Shared.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -144,6 +151,7 @@
 				TargetAttributes = {
 					B796F9DF2948FFD600910A0A = {
 						CreatedOnToolsVersion = 14.0.1;
+						LastSwiftMigration = 1400;
 					};
 					B796F9E72948FFD700910A0A = {
 						CreatedOnToolsVersion = 14.0.1;
@@ -191,6 +199,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B73A2FDC29494D5D002C08C9 /* CoordinatorProtocol.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -264,7 +273,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -321,7 +330,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -336,6 +345,7 @@
 		B796F9F32948FFD700910A0A /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
@@ -346,6 +356,7 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -356,6 +367,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -364,6 +376,7 @@
 		B796F9F42948FFD700910A0A /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
@@ -374,6 +387,7 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -392,6 +406,7 @@
 		B796F9F62948FFD700910A0A /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = RHBH6Q62PG;
@@ -408,6 +423,7 @@
 		B796F9F72948FFD700910A0A /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = RHBH6Q62PG;
