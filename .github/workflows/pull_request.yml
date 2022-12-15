@@ -43,4 +43,4 @@ jobs:
             -format=lcov \
             -instr-profile \
             build/Build/ProfileData/**/Coverage.profdata \
-            build/Build/Products/**/App.app/ETH_DEV > build/lcov.info
+            build/Build/Products/**/App.app/App > build/lcov.info
