@@ -6,7 +6,6 @@ target 'App' do
   use_frameworks!
 
   # Pods for App
-  pod 'SwiftLint'
 
   target 'AppTests' do
     inherit! :search_paths
