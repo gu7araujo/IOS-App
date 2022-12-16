@@ -35,7 +35,7 @@ jobs:
         run: |
           xcodebuild clean test \
             -workspace App.xcworkspace \
-            -scheme AppTests \
+            -scheme App \
             -derivedDataPath build \
             -destination "platform=iOS Simulator,name=iPhone 12" \
             -resultBundlePath ./build/test-results.xcresult
