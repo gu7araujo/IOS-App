@@ -99,10 +99,10 @@ class TabCoordinator: NSObject, TabCoordinatorProtocol {
 
         switch page {
         case .home:
-            let coordinator = HomeCoordinator(navController)
+            let coordinator = MainCompositionRoot().buildHomeCoordinator(navController)
             coordinator.start()
         case .menu:
-            let coordinator = MenuCoordinator(navController)
+            let coordinator = MainCompositionRoot().buildMenuCoordinator(navController)
             coordinator.start()
         }
 

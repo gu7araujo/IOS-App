@@ -24,7 +24,7 @@ class AppCoordinator: CoordinatorProtocol {
     }
 
     private func showMainFlow() {
-        let tabCoordinator = TabCoordinator(navigationController)
+        let tabCoordinator = MainCompositionRoot().buildTabCoordinator(navigationController)
         tabCoordinator.finishDelegate = self
         tabCoordinator.start()
         childCoordinators.append(tabCoordinator)
