@@ -20,7 +20,7 @@ public class MenuCoordinator: CoordinatorProtocol {
     }
 
     public func start() {
-        let menuViewController = MenuViewController()
+        let menuViewController = MenuCompositionRoot().buildMenuViewController()
         navigationController.pushViewController(menuViewController, animated: true)
     }
 

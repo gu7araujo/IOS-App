@@ -11,6 +11,7 @@
 		B73A2FEB2949583C002C08C9 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B73A2FEA2949583C002C08C9 /* MenuViewController.swift */; };
 		B796FA2D2949010200910A0A /* Menu.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B796FA242949010100910A0A /* Menu.framework */; };
 		B796FA322949010200910A0A /* MenuTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B796FA312949010200910A0A /* MenuTests.swift */; };
+		B7C22682294F7C8100971ECC /* MenuCompositionRoot.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7C22681294F7C8100971ECC /* MenuCompositionRoot.swift */; };
 		B7FAA43F294A4FDB00EE65C3 /* Shared.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B7FAA43E294A4FDB00EE65C3 /* Shared.framework */; };
 		B7FAA440294A4FDB00EE65C3 /* Shared.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B7FAA43E294A4FDB00EE65C3 /* Shared.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
@@ -45,6 +46,7 @@
 		B796FA242949010100910A0A /* Menu.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Menu.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B796FA2C2949010200910A0A /* MenuTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MenuTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B796FA312949010200910A0A /* MenuTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuTests.swift; sourceTree = "<group>"; };
+		B7C22681294F7C8100971ECC /* MenuCompositionRoot.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuCompositionRoot.swift; sourceTree = "<group>"; };
 		B7FAA43E294A4FDB00EE65C3 /* Shared.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Shared.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -98,8 +100,9 @@
 		B796FA262949010100910A0A /* Menu */ = {
 			isa = PBXGroup;
 			children = (
-				B73A2FE929495832002C08C9 /* ViewController */,
+				B7C22681294F7C8100971ECC /* MenuCompositionRoot.swift */,
 				B73A2FE7294957F4002C08C9 /* MenuCoordinator.swift */,
+				B73A2FE929495832002C08C9 /* ViewController */,
 			);
 			path = Menu;
 			sourceTree = "<group>";
@@ -232,6 +235,7 @@
 			files = (
 				B73A2FE8294957F4002C08C9 /* MenuCoordinator.swift in Sources */,
 				B73A2FEB2949583C002C08C9 /* MenuViewController.swift in Sources */,
+				B7C22682294F7C8100971ECC /* MenuCompositionRoot.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

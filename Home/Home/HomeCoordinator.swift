@@ -20,7 +20,7 @@ public class HomeCoordinator: CoordinatorProtocol {
     }
 
     public func start() {
-        let homeViewController = HomeViewController()
+        let homeViewController = HomeCompositionRoot().buildHomeViewController()
         navigationController.pushViewController(homeViewController, animated: true)
     }
 
