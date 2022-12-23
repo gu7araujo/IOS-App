@@ -41,6 +41,9 @@
 		B7524B7B29536B390010FFDE /* DEV-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = B796F9B32948BCE000910A0A /* DEV-Info.plist */; };
 		B7524B7F29536CAB0010FFDE /* PROD-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = B7524B7D29536CA30010FFDE /* PROD-Info.plist */; };
 		B7524B8029536CB50010FFDE /* QA-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = B7524B7E29536CA30010FFDE /* QA-Info.plist */; };
+		B758ADB329552B2F0071EB22 /* AppInitialization.swift in Sources */ = {isa = PBXBuildFile; fileRef = B758ADB229552B2F0071EB22 /* AppInitialization.swift */; };
+		B758ADB429552B2F0071EB22 /* AppInitialization.swift in Sources */ = {isa = PBXBuildFile; fileRef = B758ADB229552B2F0071EB22 /* AppInitialization.swift */; };
+		B758ADB529552B2F0071EB22 /* AppInitialization.swift in Sources */ = {isa = PBXBuildFile; fileRef = B758ADB229552B2F0071EB22 /* AppInitialization.swift */; };
 		B796F9A62948BCDE00910A0A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B796F9A52948BCDE00910A0A /* AppDelegate.swift */; };
 		B796F9A82948BCDE00910A0A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B796F9A72948BCDE00910A0A /* SceneDelegate.swift */; };
 		B796F9AF2948BCE000910A0A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B796F9AE2948BCE000910A0A /* Assets.xcassets */; };
@@ -131,6 +134,7 @@
 		B7524B772953689C0010FFDE /* App_PROD.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = App_PROD.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B7524B7D29536CA30010FFDE /* PROD-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "PROD-Info.plist"; sourceTree = "<group>"; };
 		B7524B7E29536CA30010FFDE /* QA-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "QA-Info.plist"; sourceTree = "<group>"; };
+		B758ADB229552B2F0071EB22 /* AppInitialization.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppInitialization.swift; sourceTree = "<group>"; };
 		B796F9A22948BCDE00910A0A /* App_DEV.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = App_DEV.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B796F9A52948BCDE00910A0A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B796F9A72948BCDE00910A0A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -247,6 +251,7 @@
 				B7C22685294F7D4F00971ECC /* MainCompositionRoot.swift */,
 				B73A2FDF294953DA002C08C9 /* TabCoordinator.swift */,
 				B73A2FDD29494E86002C08C9 /* AppCoordinator.swift */,
+				B758ADB229552B2F0071EB22 /* AppInitialization.swift */,
 				B796F9A52948BCDE00910A0A /* AppDelegate.swift */,
 				B796F9A72948BCDE00910A0A /* SceneDelegate.swift */,
 				B796F9AE2948BCE000910A0A /* Assets.xcassets */,
@@ -653,6 +658,7 @@
 				B7524B48295368890010FFDE /* AppCoordinator.swift in Sources */,
 				B7524B49295368890010FFDE /* AppDelegate.swift in Sources */,
 				B7524B4A295368890010FFDE /* MainCompositionRoot.swift in Sources */,
+				B758ADB429552B2F0071EB22 /* AppInitialization.swift in Sources */,
 				B7524B4B295368890010FFDE /* TabCoordinator.swift in Sources */,
 				B7524B4C295368890010FFDE /* SceneDelegate.swift in Sources */,
 			);
@@ -665,6 +671,7 @@
 				B7524B622953689C0010FFDE /* AppCoordinator.swift in Sources */,
 				B7524B632953689C0010FFDE /* AppDelegate.swift in Sources */,
 				B7524B642953689C0010FFDE /* MainCompositionRoot.swift in Sources */,
+				B758ADB529552B2F0071EB22 /* AppInitialization.swift in Sources */,
 				B7524B652953689C0010FFDE /* TabCoordinator.swift in Sources */,
 				B7524B662953689C0010FFDE /* SceneDelegate.swift in Sources */,
 			);
@@ -677,6 +684,7 @@
 				B73A2FDE29494E86002C08C9 /* AppCoordinator.swift in Sources */,
 				B796F9A62948BCDE00910A0A /* AppDelegate.swift in Sources */,
 				B7C22686294F7D4F00971ECC /* MainCompositionRoot.swift in Sources */,
+				B758ADB329552B2F0071EB22 /* AppInitialization.swift in Sources */,
 				B73A2FE0294953DA002C08C9 /* TabCoordinator.swift in Sources */,
 				B796F9A82948BCDE00910A0A /* SceneDelegate.swift in Sources */,
 			);
@@ -737,7 +745,7 @@
 				DEVELOPMENT_TEAM = RHBH6Q62PG;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "App/QA-Info.plist";
-				INFOPLIST_KEY_CFBundleDisplayName = "Gustavo APP QA";
+				INFOPLIST_KEY_CFBundleDisplayName = GustavoAPPQA;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.education";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
@@ -771,7 +779,7 @@
 				DEVELOPMENT_TEAM = RHBH6Q62PG;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "App/QA-Info.plist";
-				INFOPLIST_KEY_CFBundleDisplayName = "Gustavo APP QA";
+				INFOPLIST_KEY_CFBundleDisplayName = GustavoAPPQA;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.education";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
@@ -987,7 +995,7 @@
 				DEVELOPMENT_TEAM = RHBH6Q62PG;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "App/DEV-Info.plist";
-				INFOPLIST_KEY_CFBundleDisplayName = "Gustavo APP DEV";
+				INFOPLIST_KEY_CFBundleDisplayName = GustavoAPPDEV;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.education";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
@@ -1021,7 +1029,7 @@
 				DEVELOPMENT_TEAM = RHBH6Q62PG;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "App/DEV-Info.plist";
-				INFOPLIST_KEY_CFBundleDisplayName = "Gustavo APP DEV";
+				INFOPLIST_KEY_CFBundleDisplayName = GustavoAPPDEV;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.education";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;

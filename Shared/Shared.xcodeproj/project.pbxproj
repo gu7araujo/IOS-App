@@ -8,8 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		B73A2FDC29494D5D002C08C9 /* CoordinatorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = B73A2FDB29494D5D002C08C9 /* CoordinatorProtocol.swift */; };
+		B758ADB729552C3D0071EB22 /* Session.swift in Sources */ = {isa = PBXBuildFile; fileRef = B758ADB629552C3D0071EB22 /* Session.swift */; };
 		B796F9E92948FFD700910A0A /* Shared.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B796F9E02948FFD600910A0A /* Shared.framework */; };
 		B796F9EE2948FFD700910A0A /* SharedTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B796F9ED2948FFD700910A0A /* SharedTests.swift */; };
+		B7AA2DB92955D01C00E8F55A /* KeychainHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7AA2DB82955D01C00E8F55A /* KeychainHelper.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -24,9 +26,11 @@
 
 /* Begin PBXFileReference section */
 		B73A2FDB29494D5D002C08C9 /* CoordinatorProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoordinatorProtocol.swift; sourceTree = "<group>"; };
+		B758ADB629552C3D0071EB22 /* Session.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Session.swift; sourceTree = "<group>"; };
 		B796F9E02948FFD600910A0A /* Shared.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Shared.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B796F9E82948FFD700910A0A /* SharedTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SharedTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B796F9ED2948FFD700910A0A /* SharedTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SharedTests.swift; sourceTree = "<group>"; };
+		B7AA2DB82955D01C00E8F55A /* KeychainHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeychainHelper.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,7 +81,9 @@
 		B796F9E22948FFD600910A0A /* Shared */ = {
 			isa = PBXGroup;
 			children = (
+				B7AA2DB72955D00700E8F55A /* Persistence */,
 				B73A2FDA29494D47002C08C9 /* Protocol */,
+				B758ADB629552C3D0071EB22 /* Session.swift */,
 			);
 			path = Shared;
 			sourceTree = "<group>";
@@ -88,6 +94,14 @@
 				B796F9ED2948FFD700910A0A /* SharedTests.swift */,
 			);
 			path = SharedTests;
+			sourceTree = "<group>";
+		};
+		B7AA2DB72955D00700E8F55A /* Persistence */ = {
+			isa = PBXGroup;
+			children = (
+				B7AA2DB82955D01C00E8F55A /* KeychainHelper.swift */,
+			);
+			path = Persistence;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -199,6 +213,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B758ADB729552C3D0071EB22 /* Session.swift in Sources */,
+				B7AA2DB92955D01C00E8F55A /* KeychainHelper.swift in Sources */,
 				B73A2FDC29494D5D002C08C9 /* CoordinatorProtocol.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
