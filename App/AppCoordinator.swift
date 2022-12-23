@@ -24,6 +24,8 @@ class AppCoordinator: CoordinatorProtocol {
     }
 
     private func showMainFlow() {
+        let shouldLoadingOnScreen = Session.shared.currentTokens == nil
+        debugPrint(shouldLoadingOnScreen)
         let tabCoordinator = MainCompositionRoot().buildTabCoordinator(navigationController)
         tabCoordinator.finishDelegate = self
         tabCoordinator.start()
