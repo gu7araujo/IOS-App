@@ -12,6 +12,8 @@
 		B796F9E92948FFD700910A0A /* Shared.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B796F9E02948FFD600910A0A /* Shared.framework */; };
 		B796F9EE2948FFD700910A0A /* SharedTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B796F9ED2948FFD700910A0A /* SharedTests.swift */; };
 		B7AA2DB92955D01C00E8F55A /* KeychainHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7AA2DB82955D01C00E8F55A /* KeychainHelper.swift */; };
+		B7AA2DBC2956222600E8F55A /* UIViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7AA2DBB2956222600E8F55A /* UIViewController+Extension.swift */; };
+		B7AA2DBF2956228700E8F55A /* LoadingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7AA2DBE2956228700E8F55A /* LoadingViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -31,6 +33,8 @@
 		B796F9E82948FFD700910A0A /* SharedTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SharedTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B796F9ED2948FFD700910A0A /* SharedTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SharedTests.swift; sourceTree = "<group>"; };
 		B7AA2DB82955D01C00E8F55A /* KeychainHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeychainHelper.swift; sourceTree = "<group>"; };
+		B7AA2DBB2956222600E8F55A /* UIViewController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extension.swift"; sourceTree = "<group>"; };
+		B7AA2DBE2956228700E8F55A /* LoadingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,6 +85,8 @@
 		B796F9E22948FFD600910A0A /* Shared */ = {
 			isa = PBXGroup;
 			children = (
+				B7AA2DBD2956227600E8F55A /* ViewController */,
+				B7AA2DBA2956215400E8F55A /* Extension */,
 				B7AA2DB72955D00700E8F55A /* Persistence */,
 				B73A2FDA29494D47002C08C9 /* Protocol */,
 				B758ADB629552C3D0071EB22 /* Session.swift */,
@@ -102,6 +108,22 @@
 				B7AA2DB82955D01C00E8F55A /* KeychainHelper.swift */,
 			);
 			path = Persistence;
+			sourceTree = "<group>";
+		};
+		B7AA2DBA2956215400E8F55A /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				B7AA2DBB2956222600E8F55A /* UIViewController+Extension.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		B7AA2DBD2956227600E8F55A /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				B7AA2DBE2956228700E8F55A /* LoadingViewController.swift */,
+			);
+			path = ViewController;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -213,7 +235,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B7AA2DBC2956222600E8F55A /* UIViewController+Extension.swift in Sources */,
 				B758ADB729552C3D0071EB22 /* Session.swift in Sources */,
+				B7AA2DBF2956228700E8F55A /* LoadingViewController.swift in Sources */,
 				B7AA2DB92955D01C00E8F55A /* KeychainHelper.swift in Sources */,
 				B73A2FDC29494D5D002C08C9 /* CoordinatorProtocol.swift in Sources */,
 			);
