@@ -1,20 +1,17 @@
-# Uncomment the next line to define a global platform for your project
+workspace 'App.xcworkspace'
 platform :ios, '15.0'
 
-target 'App_DEV' do
-  # Comment the next line if you don't want to use dynamic frameworks
+project 'App.xcodeproj'
+target :App_DEV do
+  project 'App'
   use_frameworks!
-
-  # Pods for App
   pod 'SwiftLint'
+end
 
-  target 'AppTests' do
-    inherit! :search_paths
-    # Pods for testing
+project 'Shared/Shared.xcodeproj'
+target :Shared do
+  project 'Shared/Shared.xcodeproj'
+  use_frameworks!
+  target :SharedTests do
   end
-
-  target 'AppUITests' do
-    # Pods for testing
-  end
-
 end
