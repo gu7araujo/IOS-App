@@ -1,7 +1,7 @@
 # Uncomment the next line to define a global platform for your project
- platform :ios, '15.0'
+platform :ios, '15.0'
 
-target 'App' do
+target 'App_DEV' do
   # Comment the next line if you don't want to use dynamic frameworks
   use_frameworks!
 
