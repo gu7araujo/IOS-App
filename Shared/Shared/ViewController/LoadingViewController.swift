@@ -6,14 +6,15 @@
 //
 
 import UIKit
+import Lottie
 
 public class LoadingViewController: UIViewController {
 
-    private lazy var titleLabel: UILabel = {
-        let label = UILabel()
-        label.text = "Loading..."
-        label.textColor = .black
-        return label
+    private lazy var animationView: LottieAnimationView = {
+        let view = LottieAnimationView(name: "loading", bundle: Bundle(for: LoadingViewController.self))
+        view.contentMode = .scaleAspectFit
+        view.loopMode = .loop
+        return view
     }()
 
     private var observer: NSObjectProtocol?
@@ -39,19 +40,22 @@ public class LoadingViewController: UIViewController {
     }
 
     private func buildTree() {
-        view.addSubview(titleLabel)
+        view.addSubview(animationView)
     }
 
     private func buildConstraints() {
-        titleLabel.translatesAutoresizingMaskIntoConstraints = false
+        animationView.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([
-            titleLabel.centerXAnchor.constraint(equalTo: view.centerXAnchor),
-            titleLabel.centerYAnchor.constraint(equalTo: view.centerYAnchor)
+            animationView.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+            animationView.centerYAnchor.constraint(equalTo: view.centerYAnchor),
+            animationView.heightAnchor.constraint(equalToConstant: 200),
+            animationView.widthAnchor.constraint(equalToConstant: 200)
         ])
     }
 
-    public override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
+    public override func viewDidLoad() {
+        super.viewDidLoad()
+        animationView.play()
     }
 
 }
