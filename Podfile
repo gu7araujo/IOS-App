@@ -15,3 +15,12 @@ target :Shared do
   target :SharedTests do
   end
 end
+
+project 'Home/Home.xcodeproj'
+target :Home do
+  project 'Home/Home.xcodeproj'
+  use_frameworks!
+  pod 'SVGKit'
+  target :HomeTests do
+  end
+end

@@ -126,7 +126,6 @@
 				B7AA2DBA2956215400E8F55A /* Extension */,
 				B7AA2DB72955D00700E8F55A /* Persistence */,
 				B73A2FDA29494D47002C08C9 /* Protocol */,
-				B758ADB629552C3D0071EB22 /* Session.swift */,
 			);
 			path = Shared;
 			sourceTree = "<group>";
@@ -142,6 +141,7 @@
 		B7AA2DB72955D00700E8F55A /* Persistence */ = {
 			isa = PBXGroup;
 			children = (
+				B758ADB629552C3D0071EB22 /* Session.swift */,
 				B7AA2DB82955D01C00E8F55A /* KeychainHelper.swift */,
 			);
 			path = Persistence;
