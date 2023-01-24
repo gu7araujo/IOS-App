@@ -5,7 +5,6 @@
 //  Created by Gustavo Araujo Santos on 13/12/22.
 //
 
-import Combine
 import UIKit
 import Shared
 import Home
@@ -67,8 +66,6 @@ class TabCoordinator: NSObject, TabCoordinatorProtocol {
     var childCoordinators: [CoordinatorProtocol] = []
     var type: CoordinatorType = .tab
 
-    private var cancellables: [AnyCancellable] = []
-
     required init(_ navigationController: UINavigationController) {
         self.navigationController = navigationController
         self.tabBarController = UITabBarController()
@@ -81,19 +78,6 @@ class TabCoordinator: NSObject, TabCoordinatorProtocol {
         let controllers: [UINavigationController] = pages.map({ getTabController($0) })
 
         prepareTabBarController(withTabControllers: controllers)
-        bindPublishers()
-    }
-
-    private func bindPublishers() {
-        Session.shared.$currentTokens
-            .receive(on: DispatchQueue.main)
-            .sink(receiveValue: { [weak self] value in
-                if value == nil {
-                    self?.tabBarController.setLoading()
-                } else {
-                    self?.tabBarController.restoreContent()
-                }
-            }).store(in: &cancellables)
     }
 
     private func prepareTabBarController(withTabControllers tabControllers: [UIViewController]) {
