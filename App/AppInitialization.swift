@@ -22,6 +22,7 @@ class AppInitialization {
                 await fetchMandatoryTokens()
             }
         }
+        _ = RemoteConfigValues.standard
     }
 
     private func readTokens() -> Bool {
