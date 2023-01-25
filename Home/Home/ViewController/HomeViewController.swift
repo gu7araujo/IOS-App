@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Shared
 
 class HomeViewController: UIViewController {
 
@@ -17,6 +18,7 @@ class HomeViewController: UIViewController {
         view.dataSource = self
         view.register(TableViewCellWithCollectionView.self, forCellReuseIdentifier: "cell")
         view.register(TableViewCellWithStackView.self, forCellReuseIdentifier: "cellStack")
+        view.register(TableViewCellWithButtons.self, forCellReuseIdentifier: "cellButtons")
         return view
     }()
 
@@ -52,15 +54,18 @@ class HomeViewController: UIViewController {
 
 extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        2
+        3
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell: UITableViewCell?
         if indexPath.row == 0 {
             cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as? TableViewCellWithCollectionView
-        } else {
+        } else if indexPath.row == 1 {
             cell = tableView.dequeueReusableCell(withIdentifier: "cellStack", for: indexPath) as? TableViewCellWithStackView
+        } else {
+            cell = tableView.dequeueReusableCell(withIdentifier: "cellButtons", for: indexPath) as? TableViewCellWithButtons
+            cell?.selectionStyle = .none
         }
 
         return cell ?? UITableViewCell()
@@ -69,8 +74,10 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         if indexPath.row == 0 {
             return 100
-        } else {
+        } else if indexPath.row == 1 {
             return 200
+        } else {
+            return 80
         }
     }
 }
@@ -191,6 +198,78 @@ class TableViewCellWithStackView: UITableViewCell {
             stackView.leadingAnchor.constraint(equalTo: leadingAnchor),
             stackView.trailingAnchor.constraint(equalTo: trailingAnchor),
             stackView.bottomAnchor.constraint(equalTo: bottomAnchor)
+        ])
+    }
+
+}
+
+class TableViewCellWithButtons: UITableViewCell {
+
+    private lazy var button1: UIButton = {
+        let button = UIButton()
+        button.setTitle(RemoteConfigValues.standard.string(forKey: .homeScreenButton1Text), for: .normal)
+        button.addTarget(self, action: #selector(pressed), for: .touchUpInside)
+        return button
+    }()
+
+    private lazy var button2: UIButton = {
+        let button = UIButton()
+        button.setTitle(RemoteConfigValues.standard.string(forKey: .homeScreenButton2Text), for: .normal)
+        button.addTarget(self, action: #selector(pressed), for: .touchUpInside)
+        return button
+    }()
+
+    private lazy var button3: UIButton = {
+        let button = UIButton()
+        button.setTitle(RemoteConfigValues.standard.string(forKey: .homeScreenButton3Text), for: .normal)
+        button.addTarget(self, action: #selector(pressed), for: .touchUpInside)
+        return button
+    }()
+
+    @objc private func pressed() {
+        debugPrint("Button tapped")
+    }
+
+    override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
+        super.init(style: style, reuseIdentifier: reuseIdentifier)
+        backgroundColor = .blue
+        buildTree()
+        buildConstraints()
+    }
+
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+
+    private func buildTree() {
+        contentView.addSubview(button1)
+        contentView.addSubview(button2)
+        contentView.addSubview(button3)
+    }
+
+    private func buildConstraints() {
+        button1.translatesAutoresizingMaskIntoConstraints = false
+        NSLayoutConstraint.activate([
+            button1.leadingAnchor.constraint(equalTo: leadingAnchor),
+            button1.topAnchor.constraint(equalTo: topAnchor),
+            button1.trailingAnchor.constraint(equalTo: trailingAnchor),
+            button1.heightAnchor.constraint(equalToConstant: 20)
+        ])
+
+        button2.translatesAutoresizingMaskIntoConstraints = false
+        NSLayoutConstraint.activate([
+            button2.leadingAnchor.constraint(equalTo: leadingAnchor),
+            button2.topAnchor.constraint(equalTo: button1.bottomAnchor, constant: 10),
+            button2.trailingAnchor.constraint(equalTo: trailingAnchor),
+            button2.heightAnchor.constraint(equalToConstant: 20)
+        ])
+
+        button3.translatesAutoresizingMaskIntoConstraints = false
+        NSLayoutConstraint.activate([
+            button3.leadingAnchor.constraint(equalTo: leadingAnchor),
+            button3.topAnchor.constraint(equalTo: button2.bottomAnchor, constant: 10),
+            button3.trailingAnchor.constraint(equalTo: trailingAnchor),
+            button3.heightAnchor.constraint(equalToConstant: 20)
         ])
     }
 

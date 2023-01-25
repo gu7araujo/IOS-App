@@ -11,7 +11,9 @@ import FirebaseRemoteConfig
 public class RemoteConfigValues {
 
     public enum ValueKey: String {
-        case kill
+        case homeScreenButton1Text
+        case homeScreenButton2Text
+        case homeScreenButton3Text
     }
 
     @Published public var fetchComplete = false
@@ -25,7 +27,9 @@ public class RemoteConfigValues {
 
     private func loadDefaultValues() {
         let appDefaults: [String: Any?] = [
-            ValueKey.kill.rawValue: false
+            ValueKey.homeScreenButton1Text.rawValue: "text default",
+            ValueKey.homeScreenButton2Text.rawValue: "text default",
+            ValueKey.homeScreenButton3Text.rawValue: "text default"
         ]
         RemoteConfig.remoteConfig().setDefaults(appDefaults as? [String: NSObject])
     }
