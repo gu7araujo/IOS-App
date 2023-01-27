@@ -4,6 +4,9 @@ platform :ios, '15.0'
 def shared_pods
   pod 'FirebaseCore', '~> 10.4'
   pod 'FirebaseRemoteConfig', '~> 10.4'
+  pod 'FirebaseAnalytics', '~> 10.4'
+  pod 'FirebaseCrashlytics', '~> 10.4'
+  pod 'FirebasePerformance', '~> 10.4'
 end
 
 project 'App.xcodeproj'

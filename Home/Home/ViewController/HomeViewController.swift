@@ -208,26 +208,34 @@ class TableViewCellWithButtons: UITableViewCell {
     private lazy var button1: UIButton = {
         let button = UIButton()
         button.setTitle(RemoteConfigValues.standard.string(forKey: .homeScreenButton1Text), for: .normal)
-        button.addTarget(self, action: #selector(pressed), for: .touchUpInside)
+        button.addTarget(self, action: #selector(button1Pressed), for: .touchUpInside)
         return button
     }()
 
     private lazy var button2: UIButton = {
         let button = UIButton()
         button.setTitle(RemoteConfigValues.standard.string(forKey: .homeScreenButton2Text), for: .normal)
-        button.addTarget(self, action: #selector(pressed), for: .touchUpInside)
+        button.addTarget(self, action: #selector(button2Pressed), for: .touchUpInside)
         return button
     }()
 
     private lazy var button3: UIButton = {
         let button = UIButton()
         button.setTitle(RemoteConfigValues.standard.string(forKey: .homeScreenButton3Text), for: .normal)
-        button.addTarget(self, action: #selector(pressed), for: .touchUpInside)
+        button.addTarget(self, action: #selector(button3Pressed), for: .touchUpInside)
         return button
     }()
 
-    @objc private func pressed() {
-        debugPrint("Button tapped")
+    @objc private func button1Pressed() {
+        debugPrint("Button 1 tapped")
+    }
+
+    @objc private func button2Pressed() {
+        debugPrint("Button 2 tapped")
+    }
+
+    @objc private func button3Pressed() {
+        fatalError("Crash")
     }
 
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {

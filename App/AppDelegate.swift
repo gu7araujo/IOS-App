@@ -7,6 +7,10 @@
 
 import UIKit
 import FirebaseCore
+import FirebaseAnalytics
+import FirebaseCrashlytics
+import FirebaseRemoteConfig
+import FirebasePerformance
 import Shared
 
 @main
