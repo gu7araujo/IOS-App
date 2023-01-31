@@ -18,6 +18,13 @@
 		B7AA2DB92955D01C00E8F55A /* KeychainHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7AA2DB82955D01C00E8F55A /* KeychainHelper.swift */; };
 		B7AA2DBC2956222600E8F55A /* UIViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7AA2DBB2956222600E8F55A /* UIViewController+Extension.swift */; };
 		B7AA2DBF2956228700E8F55A /* LoadingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7AA2DBE2956228700E8F55A /* LoadingViewController.swift */; };
+		B7D6F1F5298836BB007EABB7 /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7D6F1F4298836BB007EABB7 /* UIColor+Extension.swift */; };
+		B7D6F1F82988375A007EABB7 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7D6F1F72988375A007EABB7 /* Colors.swift */; };
+		B7D6F1FA29883835007EABB7 /* Typography.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7D6F1F929883835007EABB7 /* Typography.swift */; };
+		B7D6F1FC298838A0007EABB7 /* UIFont+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7D6F1FB298838A0007EABB7 /* UIFont+Extension.swift */; };
+		B7D6F201298839E7007EABB7 /* Roboto-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B7D6F1FE298839E7007EABB7 /* Roboto-Bold.ttf */; };
+		B7D6F202298839E7007EABB7 /* Roboto-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B7D6F1FF298839E7007EABB7 /* Roboto-Regular.ttf */; };
+		B7D6F203298839E7007EABB7 /* Roboto-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B7D6F200298839E7007EABB7 /* Roboto-Light.ttf */; };
 		BF88A75865EDD2CC5AAB7FEA /* Pods_Shared_SharedTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 378776A0879C9CAB09DC1714 /* Pods_Shared_SharedTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -47,6 +54,13 @@
 		B7AA2DB82955D01C00E8F55A /* KeychainHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeychainHelper.swift; sourceTree = "<group>"; };
 		B7AA2DBB2956222600E8F55A /* UIViewController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extension.swift"; sourceTree = "<group>"; };
 		B7AA2DBE2956228700E8F55A /* LoadingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingViewController.swift; sourceTree = "<group>"; };
+		B7D6F1F4298836BB007EABB7 /* UIColor+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
+		B7D6F1F72988375A007EABB7 /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
+		B7D6F1F929883835007EABB7 /* Typography.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Typography.swift; sourceTree = "<group>"; };
+		B7D6F1FB298838A0007EABB7 /* UIFont+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIFont+Extension.swift"; sourceTree = "<group>"; };
+		B7D6F1FE298839E7007EABB7 /* Roboto-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Bold.ttf"; sourceTree = "<group>"; };
+		B7D6F1FF298839E7007EABB7 /* Roboto-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Regular.ttf"; sourceTree = "<group>"; };
+		B7D6F200298839E7007EABB7 /* Roboto-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Light.ttf"; sourceTree = "<group>"; };
 		D257CBEBA9E328338D059FEE /* Pods-Shared-SharedTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Shared-SharedTests.debug.xcconfig"; path = "Target Support Files/Pods-Shared-SharedTests/Pods-Shared-SharedTests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -123,6 +137,7 @@
 		B796F9E22948FFD600910A0A /* Shared */ = {
 			isa = PBXGroup;
 			children = (
+				B7D6F1F629883748007EABB7 /* Token */,
 				B74704A4297077A1002A4980 /* Resource */,
 				B7AA2DBD2956227600E8F55A /* ViewController */,
 				B7AA2DBA2956215400E8F55A /* Extension */,
@@ -154,6 +169,8 @@
 			isa = PBXGroup;
 			children = (
 				B7AA2DBB2956222600E8F55A /* UIViewController+Extension.swift */,
+				B7D6F1F4298836BB007EABB7 /* UIColor+Extension.swift */,
+				B7D6F1FB298838A0007EABB7 /* UIFont+Extension.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -164,6 +181,26 @@
 				B7AA2DBE2956228700E8F55A /* LoadingViewController.swift */,
 			);
 			path = ViewController;
+			sourceTree = "<group>";
+		};
+		B7D6F1F629883748007EABB7 /* Token */ = {
+			isa = PBXGroup;
+			children = (
+				B7D6F1FD298839C0007EABB7 /* Font */,
+				B7D6F1F72988375A007EABB7 /* Colors.swift */,
+				B7D6F1F929883835007EABB7 /* Typography.swift */,
+			);
+			path = Token;
+			sourceTree = "<group>";
+		};
+		B7D6F1FD298839C0007EABB7 /* Font */ = {
+			isa = PBXGroup;
+			children = (
+				B7D6F1FE298839E7007EABB7 /* Roboto-Bold.ttf */,
+				B7D6F200298839E7007EABB7 /* Roboto-Light.ttf */,
+				B7D6F1FF298839E7007EABB7 /* Roboto-Regular.ttf */,
+			);
+			path = Font;
 			sourceTree = "<group>";
 		};
 		F957C0BC4D7000627DC8EF53 /* Frameworks */ = {
@@ -259,7 +296,7 @@
 			);
 			mainGroup = B796F9D62948FFD600910A0A;
 			packageReferences = (
-				B74704A1297076C8002A4980 /* XCRemoteSwiftPackageReference "lottie-ios.git" */,
+				B74704A1297076C8002A4980 /* XCRemoteSwiftPackageReference "lottie-ios" */,
 			);
 			productRefGroup = B796F9E12948FFD600910A0A /* Products */;
 			projectDirPath = "";
@@ -276,6 +313,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B7D6F202298839E7007EABB7 /* Roboto-Regular.ttf in Resources */,
+				B7D6F201298839E7007EABB7 /* Roboto-Bold.ttf in Resources */,
+				B7D6F203298839E7007EABB7 /* Roboto-Light.ttf in Resources */,
 				B74704AE2970816C002A4980 /* loading.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -358,11 +398,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B7D6F1F5298836BB007EABB7 /* UIColor+Extension.swift in Sources */,
+				B7D6F1F82988375A007EABB7 /* Colors.swift in Sources */,
 				B7AA2DBC2956222600E8F55A /* UIViewController+Extension.swift in Sources */,
 				B758ADB729552C3D0071EB22 /* Session.swift in Sources */,
 				B7AA2DBF2956228700E8F55A /* LoadingViewController.swift in Sources */,
 				B7AA2DB92955D01C00E8F55A /* KeychainHelper.swift in Sources */,
 				B7A8993A297F08C300050EDF /* RemoteConfigValues.swift in Sources */,
+				B7D6F1FA29883835007EABB7 /* Typography.swift in Sources */,
+				B7D6F1FC298838A0007EABB7 /* UIFont+Extension.swift in Sources */,
 				B73A2FDC29494D5D002C08C9 /* CoordinatorProtocol.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -638,7 +682,7 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		B74704A1297076C8002A4980 /* XCRemoteSwiftPackageReference "lottie-ios.git" */ = {
+		B74704A1297076C8002A4980 /* XCRemoteSwiftPackageReference "lottie-ios" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/airbnb/lottie-ios.git";
 			requirement = {
@@ -651,7 +695,7 @@
 /* Begin XCSwiftPackageProductDependency section */
 		B74704A2297076C8002A4980 /* Lottie */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = B74704A1297076C8002A4980 /* XCRemoteSwiftPackageReference "lottie-ios.git" */;
+			package = B74704A1297076C8002A4980 /* XCRemoteSwiftPackageReference "lottie-ios" */;
 			productName = Lottie;
 		};
 /* End XCSwiftPackageProductDependency section */
