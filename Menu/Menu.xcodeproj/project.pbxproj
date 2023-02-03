@@ -8,7 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		B73A2FE8294957F4002C08C9 /* MenuCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B73A2FE7294957F4002C08C9 /* MenuCoordinator.swift */; };
-		B73A2FEB2949583C002C08C9 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B73A2FEA2949583C002C08C9 /* MenuViewController.swift */; };
+		B73A2FEB2949583C002C08C9 /* MenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B73A2FEA2949583C002C08C9 /* MenuView.swift */; };
+		B75EF2B9298D8A330067944D /* View1.swift in Sources */ = {isa = PBXBuildFile; fileRef = B75EF2B8298D8A330067944D /* View1.swift */; };
+		B75EF2BB298D8A570067944D /* View2.swift in Sources */ = {isa = PBXBuildFile; fileRef = B75EF2BA298D8A570067944D /* View2.swift */; };
 		B796FA2D2949010200910A0A /* Menu.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B796FA242949010100910A0A /* Menu.framework */; };
 		B796FA322949010200910A0A /* MenuTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B796FA312949010200910A0A /* MenuTests.swift */; };
 		B7C22682294F7C8100971ECC /* MenuCompositionRoot.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7C22681294F7C8100971ECC /* MenuCompositionRoot.swift */; };
@@ -42,7 +44,9 @@
 
 /* Begin PBXFileReference section */
 		B73A2FE7294957F4002C08C9 /* MenuCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuCoordinator.swift; sourceTree = "<group>"; };
-		B73A2FEA2949583C002C08C9 /* MenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
+		B73A2FEA2949583C002C08C9 /* MenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuView.swift; sourceTree = "<group>"; };
+		B75EF2B8298D8A330067944D /* View1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = View1.swift; sourceTree = "<group>"; };
+		B75EF2BA298D8A570067944D /* View2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = View2.swift; sourceTree = "<group>"; };
 		B796FA242949010100910A0A /* Menu.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Menu.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B796FA2C2949010200910A0A /* MenuTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MenuTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B796FA312949010200910A0A /* MenuTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuTests.swift; sourceTree = "<group>"; };
@@ -70,12 +74,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		B73A2FE929495832002C08C9 /* ViewController */ = {
+		B73A2FE929495832002C08C9 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				B73A2FEA2949583C002C08C9 /* MenuViewController.swift */,
+				B73A2FEA2949583C002C08C9 /* MenuView.swift */,
+				B75EF2B8298D8A330067944D /* View1.swift */,
+				B75EF2BA298D8A570067944D /* View2.swift */,
 			);
-			path = ViewController;
+			path = View;
 			sourceTree = "<group>";
 		};
 		B796FA1A2949010100910A0A = {
@@ -102,7 +108,7 @@
 			children = (
 				B7C22681294F7C8100971ECC /* MenuCompositionRoot.swift */,
 				B73A2FE7294957F4002C08C9 /* MenuCoordinator.swift */,
-				B73A2FE929495832002C08C9 /* ViewController */,
+				B73A2FE929495832002C08C9 /* View */,
 			);
 			path = Menu;
 			sourceTree = "<group>";
@@ -233,8 +239,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B75EF2BB298D8A570067944D /* View2.swift in Sources */,
 				B73A2FE8294957F4002C08C9 /* MenuCoordinator.swift in Sources */,
-				B73A2FEB2949583C002C08C9 /* MenuViewController.swift in Sources */,
+				B73A2FEB2949583C002C08C9 /* MenuView.swift in Sources */,
+				B75EF2B9298D8A330067944D /* View1.swift in Sources */,
 				B7C22682294F7C8100971ECC /* MenuCompositionRoot.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -293,6 +301,7 @@
 				COPY_PHASE_STRIP = NO;
 				CURRENT_PROJECT_VERSION = 1;
 				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_PREVIEWS = YES;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
@@ -309,7 +318,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -357,6 +366,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_PREVIEWS = YES;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -366,7 +376,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -392,7 +402,7 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -423,7 +433,7 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

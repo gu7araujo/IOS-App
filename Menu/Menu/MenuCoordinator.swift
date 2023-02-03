@@ -7,6 +7,7 @@
 
 import UIKit
 import Shared
+import SwiftUI
 
 public class MenuCoordinator: CoordinatorProtocol {
 
@@ -20,8 +21,8 @@ public class MenuCoordinator: CoordinatorProtocol {
     }
 
     public func start() {
-        let menuViewController = MenuCompositionRoot().buildMenuViewController()
-        navigationController.pushViewController(menuViewController, animated: true)
+        let childView = UIHostingController(rootView: MenuCompositionRoot().buildMenuView())        
+        navigationController.pushViewController(childView, animated: true)
     }
 
 }

@@ -1,5 +1,5 @@
 workspace 'App.xcworkspace'
-platform :ios, '15.0'
+platform :ios, '13.0'
 
 def shared_pods
   pod 'FirebaseCore', '~> 10.4'
