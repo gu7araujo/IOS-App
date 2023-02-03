@@ -14,12 +14,12 @@ struct View1: View {
         case contact = "Logo entraremos em contato com você!"
         case contactDescription = "Assim que seu cadastro comercial for verificado e aprovado, você receberá uma confirmação via e-mail ou mensagem de texto com um link para completar seu processo."
         case buttonBack = "Voltar para o início"
-        case doubts = "Dúvidas? Ligue para a Central de Atendimento Parceiro BEES"
+        case doubts = "Dúvidas? Ligue para a Central de Atendimento Parceiro"
         case time = "De segunda á sábado, das 08h ás 12h"
         case cellPhone = "Telefone:"
-        case cellPhoneNumber = "0800 887 11111"
+        case cellPhoneNumber = "0800 000 00000"
         case whatsApp = "WhatsApp:"
-        case whatsAppNumber = "+55 800 591 1540"
+        case whatsAppNumber = "+55 000 000 0000"
     }
 
     var body: some View {
