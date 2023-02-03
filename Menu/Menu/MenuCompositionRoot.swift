@@ -5,12 +5,12 @@
 //  Created by Gustavo Araujo Santos on 18/12/22.
 //
 
-import UIKit
+import SwiftUI
 
 final class MenuCompositionRoot {
 
-    func buildMenuViewController() -> UIViewController {
-        let view = MenuViewController()
+    func buildMenuView() -> some View {
+        let view = MenuView()
         return view
     }
 

@@ -65,9 +65,9 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
             cell = tableView.dequeueReusableCell(withIdentifier: "cellStack", for: indexPath) as? TableViewCellWithStackView
         } else {
             cell = tableView.dequeueReusableCell(withIdentifier: "cellButtons", for: indexPath) as? TableViewCellWithButtons
-            cell?.selectionStyle = .none
         }
 
+        cell?.selectionStyle = .none
         return cell ?? UITableViewCell()
     }
 
@@ -143,10 +143,16 @@ class TableViewCellWithStackView: UITableViewCell {
 
     private lazy var stackView: UIStackView = {
         let view = UIStackView()
-        view.backgroundColor  = .blue
         view.axis = .horizontal
         view.distribution = .equalSpacing
         view.alignment = .center
+        return view
+    }()
+
+    private lazy var subView: UIView = {
+        let view = UIView(frame: bounds)
+        view.backgroundColor = .blue
+        view.autoresizingMask = [.flexibleWidth, .flexibleHeight]
         return view
     }()
 
@@ -185,6 +191,7 @@ class TableViewCellWithStackView: UITableViewCell {
     }
 
     private func buildTree() {
+        insertSubview(subView, at: 0)
         addSubview(stackView)
         stackView.addArrangedSubview(image1)
         stackView.addArrangedSubview(image2)
