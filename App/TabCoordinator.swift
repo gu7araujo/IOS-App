@@ -91,7 +91,7 @@ class TabCoordinator: NSObject, TabCoordinatorProtocol {
 
     private func getTabController(_ page: TabBarPage) -> UINavigationController {
         let navController = UINavigationController()
-        navController.setNavigationBarHidden(false, animated: false)
+        navController.setNavigationBarHidden(true, animated: false)
 
         navController.tabBarItem = UITabBarItem.init(title: page.pageTitleValue(),
                                                      image: nil,

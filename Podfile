@@ -1,20 +1,36 @@
-# Uncomment the next line to define a global platform for your project
- platform :ios, '15.0'
+workspace 'App.xcworkspace'
+platform :ios, '13.0'
 
-target 'App' do
-  # Comment the next line if you don't want to use dynamic frameworks
+def shared_pods
+  pod 'FirebaseCore', '~> 10.4'
+  pod 'FirebaseRemoteConfig', '~> 10.4'
+  pod 'FirebaseAnalytics', '~> 10.4'
+  pod 'FirebaseCrashlytics', '~> 10.4'
+  pod 'FirebasePerformance', '~> 10.4'
+end
+
+project 'App.xcodeproj'
+target :App_DEV do
+  project 'App'
   use_frameworks!
-
-  # Pods for App
+  
+  shared_pods
   pod 'SwiftLint'
 
-  target 'AppTests' do
-    inherit! :search_paths
-    # Pods for testing
+  post_install do |installer|
+    installer.pods_project.targets.each do |target|
+      target.build_configurations.each do |config|
+        config.build_settings.delete 'IPHONEOS_DEPLOYMENT_TARGET'
+      end
+    end
   end
+end
 
-  target 'AppUITests' do
-    # Pods for testing
+project 'Shared/Shared.xcodeproj'
+target :Shared do
+  project 'Shared/Shared.xcodeproj'
+  use_frameworks!
+  shared_pods
+  target :SharedTests do
   end
-
 end
