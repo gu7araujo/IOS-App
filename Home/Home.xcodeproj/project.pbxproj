@@ -151,6 +151,8 @@
 			dependencies = (
 			);
 			name = Home;
+			packageProductDependencies = (
+			);
 			productName = Home;
 			productReference = B796FA022949009100910A0A /* Home.framework */;
 			productType = "com.apple.product-type.framework";
