@@ -17,12 +17,15 @@ class AppInitialization {
     }
 
     func start(env: Environments) {
+        tokens()
+    }
+
+    private func tokens() {
         if readTokens() == false {
             Task {
                 await fetchMandatoryTokens()
             }
         }
-        _ = RemoteConfigValues.standard
     }
 
     private func readTokens() -> Bool {

@@ -46,6 +46,7 @@ public class RemoteConfigValues {
         RemoteConfig.remoteConfig().fetch { [weak self] _, error in
             if let error = error {
                 debugPrint("Uh-oh. Got an error fetching remote values \(error)")
+                self?.fetchComplete = true
                 return
             }
 
