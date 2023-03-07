@@ -1,6 +1,15 @@
 {
   "pins" : [
     {
+      "identity" : "ios-design-system",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/gu7araujo/IOS-Design-System",
+      "state" : {
+        "branch" : "main",
+        "revision" : "7dd60f8cf351a45852b0ffd2e731f329ff29dd82"
+      }
+    },
+    {
       "identity" : "lottie-ios",
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/airbnb/lottie-ios.git",

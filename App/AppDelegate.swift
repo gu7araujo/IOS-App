@@ -11,7 +11,7 @@ import FirebaseAnalytics
 import FirebaseCrashlytics
 import FirebaseRemoteConfig
 import FirebasePerformance
-import Shared
+import DesignSystem
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
