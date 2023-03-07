@@ -56,6 +56,7 @@
 		B7A89927297F014400050EDF /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = B7A89925297F014400050EDF /* GoogleService-Info.plist */; };
 		B7A89928297F014400050EDF /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = B7A89925297F014400050EDF /* GoogleService-Info.plist */; };
 		B7C22686294F7D4F00971ECC /* MainCompositionRoot.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7C22685294F7D4F00971ECC /* MainCompositionRoot.swift */; };
+		B7EF647A29B7A9A200A372DF /* DesignSystem in Frameworks */ = {isa = PBXBuildFile; productRef = B7EF647929B7A9A200A372DF /* DesignSystem */; };
 		EBCFF033BC4BF378660D6826 /* Pods_App_DEV.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8D9D3DB370308C0C8394AE2A /* Pods_App_DEV.framework */; };
 /* End PBXBuildFile section */
 
@@ -178,6 +179,7 @@
 				B796FA3E2949015500910A0A /* Shared.framework in Frameworks */,
 				B7472A7129843DFD0043751A /* AdSupport.framework in Frameworks */,
 				B796FA452949015F00910A0A /* Menu.framework in Frameworks */,
+				B7EF647A29B7A9A200A372DF /* DesignSystem in Frameworks */,
 				B796FA422949015A00910A0A /* Home.framework in Frameworks */,
 				EBCFF033BC4BF378660D6826 /* Pods_App_DEV.framework in Frameworks */,
 			);
@@ -340,6 +342,9 @@
 			dependencies = (
 			);
 			name = App_DEV;
+			packageProductDependencies = (
+				B7EF647929B7A9A200A372DF /* DesignSystem */,
+			);
 			productName = App;
 			productReference = B796F9A22948BCDE00910A0A /* App_DEV.app */;
 			productType = "com.apple.product-type.application";
@@ -412,6 +417,9 @@
 				Base,
 			);
 			mainGroup = B796F9992948BCDE00910A0A;
+			packageReferences = (
+				B7EF647829B7A9A200A372DF /* XCRemoteSwiftPackageReference "IOS-Design-System" */,
+			);
 			productRefGroup = B796F9A32948BCDE00910A0A /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -490,7 +498,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${BUILD_DIR%/Build/*}/SourcePackages/checkouts/firebase-ios-sdk/Crashlytics/run\"\n";
+			shellScript = "\"${PODS_ROOT}/FirebaseCrashlytics/run\"\n";
 		};
 		B7FAA442294A509A00EE65C3 /* Linter */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -1094,6 +1102,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		B7EF647829B7A9A200A372DF /* XCRemoteSwiftPackageReference "IOS-Design-System" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/gu7araujo/IOS-Design-System";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		B7EF647929B7A9A200A372DF /* DesignSystem */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = B7EF647829B7A9A200A372DF /* XCRemoteSwiftPackageReference "IOS-Design-System" */;
+			productName = DesignSystem;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = B796F99A2948BCDE00910A0A /* Project object */;
 }

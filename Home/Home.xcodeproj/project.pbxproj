@@ -12,6 +12,7 @@
 		B796FA0B2949009100910A0A /* Home.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B796FA022949009100910A0A /* Home.framework */; };
 		B796FA102949009100910A0A /* HomeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B796FA0F2949009100910A0A /* HomeTests.swift */; };
 		B7C22684294F7CF500971ECC /* HomeCompositionRoot.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7C22683294F7CF500971ECC /* HomeCompositionRoot.swift */; };
+		B7EF647D29B7A9C100A372DF /* DesignSystem in Frameworks */ = {isa = PBXBuildFile; productRef = B7EF647C29B7A9C100A372DF /* DesignSystem */; };
 		B7FAA43A294A4FD500EE65C3 /* Shared.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B7FAA439294A4FD500EE65C3 /* Shared.framework */; };
 		B7FAA43B294A4FD500EE65C3 /* Shared.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B7FAA439294A4FD500EE65C3 /* Shared.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
@@ -56,6 +57,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B7FAA43A294A4FD500EE65C3 /* Shared.framework in Frameworks */,
+				B7EF647D29B7A9C100A372DF /* DesignSystem in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -152,6 +154,7 @@
 			);
 			name = Home;
 			packageProductDependencies = (
+				B7EF647C29B7A9C100A372DF /* DesignSystem */,
 			);
 			productName = Home;
 			productReference = B796FA022949009100910A0A /* Home.framework */;
@@ -203,6 +206,9 @@
 				Base,
 			);
 			mainGroup = B796F9F82949009100910A0A;
+			packageReferences = (
+				B7EF647B29B7A9C100A372DF /* XCRemoteSwiftPackageReference "IOS-Design-System" */,
+			);
 			productRefGroup = B796FA032949009100910A0A /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -506,6 +512,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		B7EF647B29B7A9C100A372DF /* XCRemoteSwiftPackageReference "IOS-Design-System" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/gu7araujo/IOS-Design-System";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		B7EF647C29B7A9C100A372DF /* DesignSystem */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = B7EF647B29B7A9C100A372DF /* XCRemoteSwiftPackageReference "IOS-Design-System" */;
+			productName = DesignSystem;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = B796F9F92949009100910A0A /* Project object */;
 }
