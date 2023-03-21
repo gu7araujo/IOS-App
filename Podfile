@@ -16,6 +16,7 @@ target :App_DEV do
   
   shared_pods
   pod 'SwiftLint'
+  pod 'MSAL'
 
   post_install do |installer|
     installer.pods_project.targets.each do |target|

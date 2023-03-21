@@ -30,25 +30,26 @@ class AppCoordinator: CoordinatorProtocol {
         RemoteConfigValues.standard.$fetchComplete
             .receive(on: DispatchQueue.main)
             .sink(receiveValue: { [weak self] _ in
-                self?.verificationToShowMainFlow()
+                self?.verificationToContinue()
             }).store(in: &cancellables)
         Session.shared.$currentTokens
             .receive(on: DispatchQueue.main)
             .sink(receiveValue: { [weak self] _ in
-                self?.verificationToShowMainFlow()
+                self?.verificationToContinue()
             }).store(in: &cancellables)
     }
 
-    private func verificationToShowMainFlow() {
+    private func verificationToContinue() {
         if Session.shared.currentTokens == nil || RemoteConfigValues.standard.fetchComplete == false {
-            navigationController.setLoading()
+            if !navigationController.isLoading() {
+                navigationController.setLoading()
+            }
         } else {
             navigationController.restoreContent()
-            showMainFlow()
-        }
+            navigateToMainFlow()        }
     }
 
-    private func showMainFlow() {
+    private func navigateToMainFlow() {
         let tabCoordinator = MainCompositionRoot().buildTabCoordinator(navigationController)
         tabCoordinator.finishDelegate = self
         tabCoordinator.start()
