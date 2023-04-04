@@ -9,10 +9,12 @@ import UIKit
 import Shared
 import Home
 import Menu
+import Profile
 
 enum TabBarPage {
     case home
     case menu
+    case profile
 
     init?(index: Int) {
         switch index {
@@ -20,6 +22,8 @@ enum TabBarPage {
             self = .home
         case 1:
             self = .menu
+        case 2:
+            self = .profile
         default:
             return nil
         }
@@ -31,6 +35,8 @@ enum TabBarPage {
             return "Home"
         case .menu:
             return "Menu"
+        case .profile:
+            return "Profile"
         }
     }
 
@@ -40,6 +46,8 @@ enum TabBarPage {
             return 0
         case .menu:
             return 1
+        case .profile:
+            return 2
         }
     }
 
@@ -72,7 +80,7 @@ class TabCoordinator: NSObject, TabCoordinatorProtocol {
     }
 
     func start() {
-        let pages: [TabBarPage] = [.home, .menu]
+        let pages: [TabBarPage] = [.home, .menu, .profile]
             .sorted(by: { $0.pageOrderNumber() < $1.pageOrderNumber() })
 
         let controllers: [UINavigationController] = pages.map({ getTabController($0) })
@@ -103,6 +111,9 @@ class TabCoordinator: NSObject, TabCoordinatorProtocol {
             coordinator.start()
         case .menu:
             let coordinator = MainCompositionRoot().buildMenuCoordinator(navController)
+            coordinator.start()
+        case .profile:
+            let coordinator = MainCompositionRoot().buildProfileCoordinator(navController)
             coordinator.start()
         }
 

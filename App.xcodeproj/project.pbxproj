@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		078EF0C6CC599B29AB6277BC /* Pods_App_QA.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8082B352C890B8989678178F /* Pods_App_QA.framework */; };
 		B73A2FDE29494E86002C08C9 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B73A2FDD29494E86002C08C9 /* AppCoordinator.swift */; };
 		B73A2FE0294953DA002C08C9 /* TabCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B73A2FDF294953DA002C08C9 /* TabCoordinator.swift */; };
 		B7472A7129843DFD0043751A /* AdSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B7472A7029843DFD0043751A /* AdSupport.framework */; };
@@ -39,6 +40,12 @@
 		B758ADB329552B2F0071EB22 /* AppInitialization.swift in Sources */ = {isa = PBXBuildFile; fileRef = B758ADB229552B2F0071EB22 /* AppInitialization.swift */; };
 		B758ADB429552B2F0071EB22 /* AppInitialization.swift in Sources */ = {isa = PBXBuildFile; fileRef = B758ADB229552B2F0071EB22 /* AppInitialization.swift */; };
 		B758ADB529552B2F0071EB22 /* AppInitialization.swift in Sources */ = {isa = PBXBuildFile; fileRef = B758ADB229552B2F0071EB22 /* AppInitialization.swift */; };
+		B76D397229CE0596006EF44F /* Profile.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B76D397129CE0596006EF44F /* Profile.framework */; };
+		B76D397329CE0596006EF44F /* Profile.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B76D397129CE0596006EF44F /* Profile.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		B76D397529CE059E006EF44F /* Profile.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B76D397429CE059E006EF44F /* Profile.framework */; };
+		B76D397629CE059E006EF44F /* Profile.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B76D397429CE059E006EF44F /* Profile.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		B76D397829CE05A5006EF44F /* Profile.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B76D397729CE05A5006EF44F /* Profile.framework */; };
+		B76D397929CE05A5006EF44F /* Profile.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B76D397729CE05A5006EF44F /* Profile.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		B796F9A62948BCDE00910A0A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B796F9A52948BCDE00910A0A /* AppDelegate.swift */; };
 		B796F9A82948BCDE00910A0A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B796F9A72948BCDE00910A0A /* SceneDelegate.swift */; };
 		B796F9AF2948BCE000910A0A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B796F9AE2948BCE000910A0A /* Assets.xcassets */; };
@@ -57,6 +64,11 @@
 		B7A89928297F014400050EDF /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = B7A89925297F014400050EDF /* GoogleService-Info.plist */; };
 		B7C22686294F7D4F00971ECC /* MainCompositionRoot.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7C22685294F7D4F00971ECC /* MainCompositionRoot.swift */; };
 		B7EF647A29B7A9A200A372DF /* DesignSystem in Frameworks */ = {isa = PBXBuildFile; productRef = B7EF647929B7A9A200A372DF /* DesignSystem */; };
+		B7FDFA5A29D200E0006C7575 /* AdSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B7472A7029843DFD0043751A /* AdSupport.framework */; };
+		B7FDFA5C29D200E5006C7575 /* DesignSystem in Frameworks */ = {isa = PBXBuildFile; productRef = B7FDFA5B29D200E5006C7575 /* DesignSystem */; };
+		B7FDFA5D29D21199006C7575 /* AdSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B7472A7029843DFD0043751A /* AdSupport.framework */; };
+		B7FDFA5F29D2119D006C7575 /* DesignSystem in Frameworks */ = {isa = PBXBuildFile; productRef = B7FDFA5E29D2119D006C7575 /* DesignSystem */; };
+		DAF360E67E086383397E9199 /* Pods_App_PROD.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B56546D51A987357C65BE4D6 /* Pods_App_PROD.framework */; };
 		EBCFF033BC4BF378660D6826 /* Pods_App_DEV.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8D9D3DB370308C0C8394AE2A /* Pods_App_DEV.framework */; };
 /* End PBXBuildFile section */
 
@@ -86,6 +98,7 @@
 			files = (
 				B7524B56295368890010FFDE /* Shared.framework in Embed Frameworks */,
 				B7524B57295368890010FFDE /* Menu.framework in Embed Frameworks */,
+				B76D397629CE059E006EF44F /* Profile.framework in Embed Frameworks */,
 				B7524B58295368890010FFDE /* Home.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
@@ -99,6 +112,7 @@
 			files = (
 				B7524B702953689C0010FFDE /* Shared.framework in Embed Frameworks */,
 				B7524B712953689C0010FFDE /* Menu.framework in Embed Frameworks */,
+				B76D397929CE05A5006EF44F /* Profile.framework in Embed Frameworks */,
 				B7524B722953689C0010FFDE /* Home.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
@@ -112,6 +126,7 @@
 			files = (
 				B796FA3F2949015500910A0A /* Shared.framework in Embed Frameworks */,
 				B796FA462949015F00910A0A /* Menu.framework in Embed Frameworks */,
+				B76D397329CE0596006EF44F /* Profile.framework in Embed Frameworks */,
 				B796FA432949015A00910A0A /* Home.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
@@ -124,7 +139,11 @@
 		21C272B7C357F4BBFAB884B8 /* Pods-App-AppUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-App-AppUITests.release.xcconfig"; path = "Target Support Files/Pods-App-AppUITests/Pods-App-AppUITests.release.xcconfig"; sourceTree = "<group>"; };
 		43C3CAF53B2EDE6F3213A071 /* Pods-App-AppUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-App-AppUITests.debug.xcconfig"; path = "Target Support Files/Pods-App-AppUITests/Pods-App-AppUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		586AB269011EB8B2175CB0CC /* Pods-App_DEV.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-App_DEV.release.xcconfig"; path = "Target Support Files/Pods-App_DEV/Pods-App_DEV.release.xcconfig"; sourceTree = "<group>"; };
+		74F85DA82C887BCE0D281819 /* Pods-App_PROD.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-App_PROD.release.xcconfig"; path = "Target Support Files/Pods-App_PROD/Pods-App_PROD.release.xcconfig"; sourceTree = "<group>"; };
+		7A71BB7E2E84903E24C1276C /* Pods-App_QA.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-App_QA.debug.xcconfig"; path = "Target Support Files/Pods-App_QA/Pods-App_QA.debug.xcconfig"; sourceTree = "<group>"; };
+		8082B352C890B8989678178F /* Pods_App_QA.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_App_QA.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8D9D3DB370308C0C8394AE2A /* Pods_App_DEV.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_App_DEV.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B56546D51A987357C65BE4D6 /* Pods_App_PROD.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_App_PROD.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B73A2FDD29494E86002C08C9 /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
 		B73A2FDF294953DA002C08C9 /* TabCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabCoordinator.swift; sourceTree = "<group>"; };
 		B7472A7029843DFD0043751A /* AdSupport.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AdSupport.framework; path = System/Library/Frameworks/AdSupport.framework; sourceTree = SDKROOT; };
@@ -133,6 +152,12 @@
 		B7524B7D29536CA30010FFDE /* PROD-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "PROD-Info.plist"; sourceTree = "<group>"; };
 		B7524B7E29536CA30010FFDE /* QA-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "QA-Info.plist"; sourceTree = "<group>"; };
 		B758ADB229552B2F0071EB22 /* AppInitialization.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppInitialization.swift; sourceTree = "<group>"; };
+		B75B225029D4BA8800ACACC9 /* App_DEV.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = App_DEV.entitlements; sourceTree = "<group>"; };
+		B75B225129D4BA8800ACACC9 /* App_PROD.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = App_PROD.entitlements; sourceTree = "<group>"; };
+		B75B225229D4BA8800ACACC9 /* App_QA.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = App_QA.entitlements; sourceTree = "<group>"; };
+		B76D397129CE0596006EF44F /* Profile.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Profile.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B76D397429CE059E006EF44F /* Profile.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Profile.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B76D397729CE05A5006EF44F /* Profile.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Profile.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B796F9A22948BCDE00910A0A /* App_DEV.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = App_DEV.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B796F9A52948BCDE00910A0A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B796F9A72948BCDE00910A0A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -149,6 +174,8 @@
 		B796FA442949015F00910A0A /* Menu.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Menu.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B7A89925297F014400050EDF /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		B7C22685294F7D4F00971ECC /* MainCompositionRoot.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCompositionRoot.swift; sourceTree = "<group>"; };
+		D5C2CFC85478CF6B49CA11E5 /* Pods-App_QA.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-App_QA.release.xcconfig"; path = "Target Support Files/Pods-App_QA/Pods-App_QA.release.xcconfig"; sourceTree = "<group>"; };
+		F8F052EF4833B80D72CF3DB9 /* Pods-App_PROD.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-App_PROD.debug.xcconfig"; path = "Target Support Files/Pods-App_PROD/Pods-App_PROD.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -158,7 +185,11 @@
 			files = (
 				B7524B4E295368890010FFDE /* Shared.framework in Frameworks */,
 				B7524B4F295368890010FFDE /* Menu.framework in Frameworks */,
+				B7FDFA5F29D2119D006C7575 /* DesignSystem in Frameworks */,
+				B76D397529CE059E006EF44F /* Profile.framework in Frameworks */,
 				B7524B50295368890010FFDE /* Home.framework in Frameworks */,
+				078EF0C6CC599B29AB6277BC /* Pods_App_QA.framework in Frameworks */,
+				B7FDFA5D29D21199006C7575 /* AdSupport.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -168,7 +199,11 @@
 			files = (
 				B7524B682953689C0010FFDE /* Shared.framework in Frameworks */,
 				B7524B692953689C0010FFDE /* Menu.framework in Frameworks */,
+				B7FDFA5C29D200E5006C7575 /* DesignSystem in Frameworks */,
+				B76D397829CE05A5006EF44F /* Profile.framework in Frameworks */,
 				B7524B6A2953689C0010FFDE /* Home.framework in Frameworks */,
+				DAF360E67E086383397E9199 /* Pods_App_PROD.framework in Frameworks */,
+				B7FDFA5A29D200E0006C7575 /* AdSupport.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -176,6 +211,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B76D397229CE0596006EF44F /* Profile.framework in Frameworks */,
 				B796FA3E2949015500910A0A /* Shared.framework in Frameworks */,
 				B7472A7129843DFD0043751A /* AdSupport.framework in Frameworks */,
 				B796FA452949015F00910A0A /* Menu.framework in Frameworks */,
@@ -209,6 +245,10 @@
 				21C272B7C357F4BBFAB884B8 /* Pods-App-AppUITests.release.xcconfig */,
 				1335CCFD22F0CDFD0A256B8F /* Pods-App_DEV.debug.xcconfig */,
 				586AB269011EB8B2175CB0CC /* Pods-App_DEV.release.xcconfig */,
+				F8F052EF4833B80D72CF3DB9 /* Pods-App_PROD.debug.xcconfig */,
+				74F85DA82C887BCE0D281819 /* Pods-App_PROD.release.xcconfig */,
+				7A71BB7E2E84903E24C1276C /* Pods-App_QA.debug.xcconfig */,
+				D5C2CFC85478CF6B49CA11E5 /* Pods-App_QA.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -252,6 +292,9 @@
 				B7524B7E29536CA30010FFDE /* QA-Info.plist */,
 				B7524B7D29536CA30010FFDE /* PROD-Info.plist */,
 				B7A89925297F014400050EDF /* GoogleService-Info.plist */,
+				B75B225029D4BA8800ACACC9 /* App_DEV.entitlements */,
+				B75B225129D4BA8800ACACC9 /* App_PROD.entitlements */,
+				B75B225229D4BA8800ACACC9 /* App_QA.entitlements */,
 			);
 			path = App;
 			sourceTree = "<group>";
@@ -276,11 +319,16 @@
 		B796FA3C2949015500910A0A /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				B76D397729CE05A5006EF44F /* Profile.framework */,
+				B76D397429CE059E006EF44F /* Profile.framework */,
+				B76D397129CE0596006EF44F /* Profile.framework */,
 				B7472A7029843DFD0043751A /* AdSupport.framework */,
 				B796FA442949015F00910A0A /* Menu.framework */,
 				B796FA412949015A00910A0A /* Home.framework */,
 				B796FA3D2949015500910A0A /* Shared.framework */,
 				8D9D3DB370308C0C8394AE2A /* Pods_App_DEV.framework */,
+				B56546D51A987357C65BE4D6 /* Pods_App_PROD.framework */,
+				8082B352C890B8989678178F /* Pods_App_QA.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -292,16 +340,21 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = B7524B5A295368890010FFDE /* Build configuration list for PBXNativeTarget "App_QA" */;
 			buildPhases = (
+				2355ABAE3E312FD565366124 /* [CP] Check Pods Manifest.lock */,
 				B7524B47295368890010FFDE /* Sources */,
 				B7524B4D295368890010FFDE /* Frameworks */,
 				B7524B52295368890010FFDE /* Resources */,
 				B7524B55295368890010FFDE /* Embed Frameworks */,
+				87390C5354D628F7CDEB7945 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
 			name = App_QA;
+			packageProductDependencies = (
+				B7FDFA5E29D2119D006C7575 /* DesignSystem */,
+			);
 			productName = App;
 			productReference = B7524B5D295368890010FFDE /* App_QA.app */;
 			productType = "com.apple.product-type.application";
@@ -310,16 +363,21 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = B7524B742953689C0010FFDE /* Build configuration list for PBXNativeTarget "App_PROD" */;
 			buildPhases = (
+				310F8EF008C15321C7CA115B /* [CP] Check Pods Manifest.lock */,
 				B7524B612953689C0010FFDE /* Sources */,
 				B7524B672953689C0010FFDE /* Frameworks */,
 				B7524B6C2953689C0010FFDE /* Resources */,
 				B7524B6F2953689C0010FFDE /* Embed Frameworks */,
+				1DD595400ADEA120404674A4 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
 			name = App_PROD;
+			packageProductDependencies = (
+				B7FDFA5B29D200E5006C7575 /* DesignSystem */,
+			);
 			productName = App;
 			productReference = B7524B772953689C0010FFDE /* App_PROD.app */;
 			productType = "com.apple.product-type.application";
@@ -481,6 +539,84 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		1DD595400ADEA120404674A4 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-App_PROD/Pods-App_PROD-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-App_PROD/Pods-App_PROD-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-App_PROD/Pods-App_PROD-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		2355ABAE3E312FD565366124 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-App_QA-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		310F8EF008C15321C7CA115B /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-App_PROD-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		87390C5354D628F7CDEB7945 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-App_QA/Pods-App_QA-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-App_QA/Pods-App_QA-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-App_QA/Pods-App_QA-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		B7472A7229845D080043751A /* Firebase Crashlytics Script */ = {
 			isa = PBXShellScriptBuildPhase;
 			alwaysOutOfDate = 1;
@@ -648,16 +784,16 @@
 /* Begin XCBuildConfiguration section */
 		B7524B5B295368890010FFDE /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7A71BB7E2E84903E24C1276C /* Pods-App_QA.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = App/App_QA.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = RHBH6Q62PG;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "App/QA-Info.plist";
-				INFOPLIST_KEY_CFBundleDisplayName = GustavoAPPQA;
-				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.education";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
@@ -668,11 +804,11 @@
 				);
 				MARKETING_VERSION = 1.0;
 				OTHER_SWIFT_FLAGS = "-DTEST";
-				PRODUCT_BUNDLE_IDENTIFIER = gusta.App;
+				PRODUCT_BUNDLE_IDENTIFIER = gusta.App.QA;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
 				SUPPORTS_MACCATALYST = NO;
-				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = YES;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
@@ -681,16 +817,16 @@
 		};
 		B7524B5C295368890010FFDE /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D5C2CFC85478CF6B49CA11E5 /* Pods-App_QA.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = App/App_QA.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = RHBH6Q62PG;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "App/QA-Info.plist";
-				INFOPLIST_KEY_CFBundleDisplayName = GustavoAPPQA;
-				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.education";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
@@ -701,11 +837,11 @@
 				);
 				MARKETING_VERSION = 1.0;
 				OTHER_SWIFT_FLAGS = "-DTEST";
-				PRODUCT_BUNDLE_IDENTIFIER = gusta.App;
+				PRODUCT_BUNDLE_IDENTIFIER = gusta.App.QA;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
 				SUPPORTS_MACCATALYST = NO;
-				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = YES;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
@@ -714,16 +850,16 @@
 		};
 		B7524B752953689C0010FFDE /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F8F052EF4833B80D72CF3DB9 /* Pods-App_PROD.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = App/App_PROD.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = RHBH6Q62PG;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "App/PROD-Info.plist";
-				INFOPLIST_KEY_CFBundleDisplayName = "Gustavo APP";
-				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.education";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
@@ -734,11 +870,11 @@
 				);
 				MARKETING_VERSION = 1.0;
 				OTHER_SWIFT_FLAGS = "-DPROD";
-				PRODUCT_BUNDLE_IDENTIFIER = gusta.App;
+				PRODUCT_BUNDLE_IDENTIFIER = gusta.App.PROD;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
 				SUPPORTS_MACCATALYST = NO;
-				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = YES;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
@@ -747,16 +883,16 @@
 		};
 		B7524B762953689C0010FFDE /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 74F85DA82C887BCE0D281819 /* Pods-App_PROD.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = App/App_PROD.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = RHBH6Q62PG;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "App/PROD-Info.plist";
-				INFOPLIST_KEY_CFBundleDisplayName = "Gustavo APP";
-				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.education";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
@@ -767,11 +903,11 @@
 				);
 				MARKETING_VERSION = 1.0;
 				OTHER_SWIFT_FLAGS = "-DPROD";
-				PRODUCT_BUNDLE_IDENTIFIER = gusta.App;
+				PRODUCT_BUNDLE_IDENTIFIER = gusta.App.PROD;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
 				SUPPORTS_MACCATALYST = NO;
-				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = YES;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
@@ -898,6 +1034,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = App/App_DEV.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
@@ -905,8 +1042,6 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "App/DEV-Info.plist";
-				INFOPLIST_KEY_CFBundleDisplayName = GustavoAPPDEV;
-				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.education";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
@@ -917,11 +1052,11 @@
 				);
 				MARKETING_VERSION = 1.0;
 				OTHER_SWIFT_FLAGS = "-DDEV";
-				PRODUCT_BUNDLE_IDENTIFIER = gusta.App;
+				PRODUCT_BUNDLE_IDENTIFIER = gusta.App.DEV;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
 				SUPPORTS_MACCATALYST = NO;
-				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = YES;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
@@ -934,6 +1069,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = App/App_DEV.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
@@ -941,8 +1077,6 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "App/DEV-Info.plist";
-				INFOPLIST_KEY_CFBundleDisplayName = GustavoAPPDEV;
-				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.education";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
@@ -953,11 +1087,11 @@
 				);
 				MARKETING_VERSION = 1.0;
 				OTHER_SWIFT_FLAGS = "-DDEV";
-				PRODUCT_BUNDLE_IDENTIFIER = gusta.App;
+				PRODUCT_BUNDLE_IDENTIFIER = gusta.App.DEV;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
 				SUPPORTS_MACCATALYST = NO;
-				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = YES;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
@@ -979,7 +1113,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
 				SUPPORTS_MACCATALYST = NO;
-				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = YES;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
@@ -1002,7 +1136,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
 				SUPPORTS_MACCATALYST = NO;
-				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = YES;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
@@ -1021,9 +1155,12 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = gusta.AppUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 				TEST_TARGET_NAME = App;
 			};
 			name = Debug;
@@ -1039,9 +1176,12 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = gusta.AppUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 				TEST_TARGET_NAME = App;
 			};
 			name = Release;
@@ -1118,6 +1258,16 @@
 
 /* Begin XCSwiftPackageProductDependency section */
 		B7EF647929B7A9A200A372DF /* DesignSystem */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = B7EF647829B7A9A200A372DF /* XCRemoteSwiftPackageReference "IOS-Design-System" */;
+			productName = DesignSystem;
+		};
+		B7FDFA5B29D200E5006C7575 /* DesignSystem */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = B7EF647829B7A9A200A372DF /* XCRemoteSwiftPackageReference "IOS-Design-System" */;
+			productName = DesignSystem;
+		};
+		B7FDFA5E29D2119D006C7575 /* DesignSystem */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = B7EF647829B7A9A200A372DF /* XCRemoteSwiftPackageReference "IOS-Design-System" */;
 			productName = DesignSystem;

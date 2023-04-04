@@ -8,6 +8,7 @@
 import UIKit
 import Home
 import Menu
+import Profile
 
 final class MainCompositionRoot {
 
@@ -28,6 +29,11 @@ final class MainCompositionRoot {
 
     func buildMenuCoordinator(_ navigationController: UINavigationController) -> MenuCoordinator {
         let coordinator = MenuCoordinator(navigationController)
+        return coordinator
+    }
+
+    func buildProfileCoordinator(_ navigationController: UINavigationController) -> ProfileCoordinator {
+        let coordinator = ProfileCoordinator(navigationController)
         return coordinator
     }
 

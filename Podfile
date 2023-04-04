@@ -1,7 +1,7 @@
 workspace 'App.xcworkspace'
 platform :ios, '13.0'
 
-def shared_pods
+def shared_firebase_pods
   pod 'FirebaseCore', '~> 10.4'
   pod 'FirebaseRemoteConfig', '~> 10.4'
   pod 'FirebaseAnalytics', '~> 10.4'
@@ -9,12 +9,17 @@ def shared_pods
   pod 'FirebasePerformance', '~> 10.4'
 end
 
+def shared_msal_pod
+  pod 'MSAL'
+end
+
 project 'App.xcodeproj'
 target :App_DEV do
   project 'App'
   use_frameworks!
   
-  shared_pods
+  shared_firebase_pods
+  shared_msal_pod
   pod 'SwiftLint'
 
   post_install do |installer|
@@ -27,11 +32,38 @@ target :App_DEV do
   end
 end
 
+project 'App.xcodeproj'
+target :App_PROD do
+  project 'App'
+  use_frameworks!
+
+  shared_firebase_pods
+  shared_msal_pod
+end
+
+project 'App.xcodeproj'
+target :App_QA do
+  project 'App'
+  use_frameworks!
+
+  shared_firebase_pods
+  shared_msal_pod
+end
+
 project 'Shared/Shared.xcodeproj'
 target :Shared do
   project 'Shared/Shared.xcodeproj'
   use_frameworks!
-  shared_pods
+  shared_firebase_pods
   target :SharedTests do
+  end
+end
+
+project 'Profile/Profile.xcodeproj'
+target :Profile do
+  project 'Profile/Profile.xcodeproj'
+  use_frameworks!
+  shared_msal_pod
+  target :ProfileTests do
   end
 end

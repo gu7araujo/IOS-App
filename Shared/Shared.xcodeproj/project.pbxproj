@@ -10,14 +10,11 @@
 		A333C2F4634A48F2B12D9E03 /* Pods_Shared.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 33FA939E6C62F71448AFC9D0 /* Pods_Shared.framework */; };
 		B73A2FDC29494D5D002C08C9 /* CoordinatorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = B73A2FDB29494D5D002C08C9 /* CoordinatorProtocol.swift */; };
 		B74704A3297076C8002A4980 /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = B74704A2297076C8002A4980 /* Lottie */; };
-		B74704AE2970816C002A4980 /* loading.json in Resources */ = {isa = PBXBuildFile; fileRef = B74704AD2970816C002A4980 /* loading.json */; };
 		B758ADB729552C3D0071EB22 /* Session.swift in Sources */ = {isa = PBXBuildFile; fileRef = B758ADB629552C3D0071EB22 /* Session.swift */; };
 		B796F9E92948FFD700910A0A /* Shared.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B796F9E02948FFD600910A0A /* Shared.framework */; };
 		B796F9EE2948FFD700910A0A /* SharedTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B796F9ED2948FFD700910A0A /* SharedTests.swift */; };
 		B7A8993A297F08C300050EDF /* RemoteConfigValues.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7A89939297F08C300050EDF /* RemoteConfigValues.swift */; };
 		B7AA2DB92955D01C00E8F55A /* KeychainHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7AA2DB82955D01C00E8F55A /* KeychainHelper.swift */; };
-		B7AA2DBC2956222600E8F55A /* UIViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7AA2DBB2956222600E8F55A /* UIViewController+Extension.swift */; };
-		B7AA2DBF2956228700E8F55A /* LoadingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7AA2DBE2956228700E8F55A /* LoadingViewController.swift */; };
 		B7EF647729B7A96700A372DF /* DesignSystem in Frameworks */ = {isa = PBXBuildFile; productRef = B7EF647629B7A96700A372DF /* DesignSystem */; };
 		BF88A75865EDD2CC5AAB7FEA /* Pods_Shared_SharedTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 378776A0879C9CAB09DC1714 /* Pods_Shared_SharedTests.framework */; };
 /* End PBXBuildFile section */
@@ -39,15 +36,12 @@
 		378776A0879C9CAB09DC1714 /* Pods_Shared_SharedTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Shared_SharedTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		96C3B2BEEB58022115DF7F2A /* Pods-Shared-SharedTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Shared-SharedTests.release.xcconfig"; path = "Target Support Files/Pods-Shared-SharedTests/Pods-Shared-SharedTests.release.xcconfig"; sourceTree = "<group>"; };
 		B73A2FDB29494D5D002C08C9 /* CoordinatorProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoordinatorProtocol.swift; sourceTree = "<group>"; };
-		B74704AD2970816C002A4980 /* loading.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = loading.json; sourceTree = "<group>"; };
 		B758ADB629552C3D0071EB22 /* Session.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Session.swift; sourceTree = "<group>"; };
 		B796F9E02948FFD600910A0A /* Shared.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Shared.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B796F9E82948FFD700910A0A /* SharedTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SharedTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B796F9ED2948FFD700910A0A /* SharedTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SharedTests.swift; sourceTree = "<group>"; };
 		B7A89939297F08C300050EDF /* RemoteConfigValues.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteConfigValues.swift; sourceTree = "<group>"; };
 		B7AA2DB82955D01C00E8F55A /* KeychainHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeychainHelper.swift; sourceTree = "<group>"; };
-		B7AA2DBB2956222600E8F55A /* UIViewController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extension.swift"; sourceTree = "<group>"; };
-		B7AA2DBE2956228700E8F55A /* LoadingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingViewController.swift; sourceTree = "<group>"; };
 		D257CBEBA9E328338D059FEE /* Pods-Shared-SharedTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Shared-SharedTests.debug.xcconfig"; path = "Target Support Files/Pods-Shared-SharedTests/Pods-Shared-SharedTests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -94,14 +88,6 @@
 			path = Protocol;
 			sourceTree = "<group>";
 		};
-		B74704A4297077A1002A4980 /* Resource */ = {
-			isa = PBXGroup;
-			children = (
-				B74704AD2970816C002A4980 /* loading.json */,
-			);
-			path = Resource;
-			sourceTree = "<group>";
-		};
 		B796F9D62948FFD600910A0A = {
 			isa = PBXGroup;
 			children = (
@@ -125,9 +111,6 @@
 		B796F9E22948FFD600910A0A /* Shared */ = {
 			isa = PBXGroup;
 			children = (
-				B74704A4297077A1002A4980 /* Resource */,
-				B7AA2DBD2956227600E8F55A /* ViewController */,
-				B7AA2DBA2956215400E8F55A /* Extension */,
 				B7AA2DB72955D00700E8F55A /* Persistence */,
 				B73A2FDA29494D47002C08C9 /* Protocol */,
 				B758ADB629552C3D0071EB22 /* Session.swift */,
@@ -150,22 +133,6 @@
 				B7A89939297F08C300050EDF /* RemoteConfigValues.swift */,
 			);
 			path = Persistence;
-			sourceTree = "<group>";
-		};
-		B7AA2DBA2956215400E8F55A /* Extension */ = {
-			isa = PBXGroup;
-			children = (
-				B7AA2DBB2956222600E8F55A /* UIViewController+Extension.swift */,
-			);
-			path = Extension;
-			sourceTree = "<group>";
-		};
-		B7AA2DBD2956227600E8F55A /* ViewController */ = {
-			isa = PBXGroup;
-			children = (
-				B7AA2DBE2956228700E8F55A /* LoadingViewController.swift */,
-			);
-			path = ViewController;
 			sourceTree = "<group>";
 		};
 		F957C0BC4D7000627DC8EF53 /* Frameworks */ = {
@@ -280,7 +247,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B74704AE2970816C002A4980 /* loading.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -362,9 +328,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B7AA2DBC2956222600E8F55A /* UIViewController+Extension.swift in Sources */,
 				B758ADB729552C3D0071EB22 /* Session.swift in Sources */,
-				B7AA2DBF2956228700E8F55A /* LoadingViewController.swift in Sources */,
 				B7AA2DB92955D01C00E8F55A /* KeychainHelper.swift in Sources */,
 				B7A8993A297F08C300050EDF /* RemoteConfigValues.swift in Sources */,
 				B73A2FDC29494D5D002C08C9 /* CoordinatorProtocol.swift in Sources */,
@@ -537,10 +501,13 @@
 				PRODUCT_BUNDLE_IDENTIFIER = gusta.Shared;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -569,9 +536,12 @@
 				PRODUCT_BUNDLE_IDENTIFIER = gusta.Shared;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

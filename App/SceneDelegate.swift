@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import MSAL
 
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
@@ -29,6 +30,18 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         appCoordinator?.start()
 
         window = safeWindow
+    }
+
+    func scene(_ scene: UIScene, openURLContexts URLContexts: Set<UIOpenURLContext>) {
+
+        guard let urlContext = URLContexts.first else {
+            return
+        }
+
+        let url = urlContext.url
+        let sourceApp = urlContext.options.sourceApplication
+
+        MSALPublicClientApplication.handleMSALResponse(url, sourceApplication: sourceApp)
     }
 
     func sceneDidDisconnect(_ scene: UIScene) {

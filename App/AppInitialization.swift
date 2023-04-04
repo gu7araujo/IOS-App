@@ -17,40 +17,40 @@ class AppInitialization {
     }
 
     func start(env: Environments) {
-        tokens()
+        verifyAPITokens()
     }
 
-    private func tokens() {
-        if readTokens() == false {
-            Task {
-                await fetchMandatoryTokens()
-            }
+    private func verifyAPITokens() {
+        let tokensOnKeychain = fetchTokenOnKeychain()
+        if let tokens = tokensOnKeychain {
+            saveOnSessionAndContinue(tokens: tokens)
+        } else {
+            Task { await fetchTokensFromAPI() }
         }
     }
 
-    private func readTokens() -> Bool {
+    private func fetchTokenOnKeychain() -> Tokens? {
         guard
             let result = KeychainHelper.standard.read(service: "tokens", account: "domain.com", type: Tokens.self)
         else {
-            return false
+            return nil
         }
-        saveOnSession(tokens: result)
-        return true
+        return result
     }
 
-    private func fetchMandatoryTokens() async {
-        // get on API
+    private func fetchTokensFromAPI() async {
+        // simulate fetch from API
         sleep(3)
         let tokens = Tokens(API: "xxx")
         persistOnKeychain(tokens: tokens)
-        saveOnSession(tokens: tokens)
+        saveOnSessionAndContinue(tokens: tokens)
     }
 
     private func persistOnKeychain(tokens: Tokens) {
         KeychainHelper.standard.save(tokens, service: "tokens", account: "domain.com")
     }
 
-    private func saveOnSession(tokens: Tokens) {
+    private func saveOnSessionAndContinue(tokens: Tokens) {
         Session.shared.currentTokens = tokens
     }
 
