@@ -6,7 +6,7 @@
       "location" : "https://github.com/gu7araujo/IOS-Design-System",
       "state" : {
         "branch" : "main",
-        "revision" : "c596ccee79128607be3e1201210faa00e7cc676e"
+        "revision" : "edc12f878076245ff7db20faaade43b877641ade"
       }
     },
     {
@@ -14,8 +14,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/airbnb/lottie-ios.git",
       "state" : {
-        "revision" : "a4622b4d6fdbe76cc5487bc27e84029abaf07217",
-        "version" : "4.0.1"
+        "revision" : "d6feea26a370019b4d3a85f5984cb95a2734776f",
+        "version" : "4.2.0"
       }
     }
   ],
