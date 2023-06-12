@@ -10,13 +10,7 @@ import Shared
 
 class AppInitialization {
 
-    enum Environments {
-        case DEV
-        case TEST
-        case PROD
-    }
-
-    func start(env: Environments) {
+    func start() {
         verifyAPITokens()
     }
 
