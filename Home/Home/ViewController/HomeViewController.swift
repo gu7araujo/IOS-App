@@ -215,7 +215,7 @@ class TableViewCellWithButtons: UITableViewCell {
 
     private lazy var button1: UIButton = {
         let button = UIButton()
-        button.setTitle(RemoteConfigValues.standard.string(forKey: .homeScreenButton1Text), for: .normal)
+        button.setTitle("Botão X", for: .normal)
         button.addTarget(self, action: #selector(button1Pressed), for: .touchUpInside)
         button.titleLabel?.font = Typography.h3Bold.rawValue
         return button
@@ -223,7 +223,7 @@ class TableViewCellWithButtons: UITableViewCell {
 
     private lazy var button2: UIButton = {
         let button = UIButton()
-        button.setTitle(RemoteConfigValues.standard.string(forKey: .homeScreenButton2Text), for: .normal)
+        button.setTitle("Botão Y", for: .normal)
         button.addTarget(self, action: #selector(button2Pressed), for: .touchUpInside)
         button.titleLabel?.font = Typography.h3.rawValue
         return button
@@ -231,7 +231,7 @@ class TableViewCellWithButtons: UITableViewCell {
 
     private lazy var button3: UIButton = {
         let button = UIButton()
-        button.setTitle(RemoteConfigValues.standard.string(forKey: .homeScreenButton3Text), for: .normal)
+        button.setTitle("Botão Z", for: .normal)
         button.addTarget(self, action: #selector(button3Pressed), for: .touchUpInside)
         button.titleLabel?.font = Typography.h4.rawValue
         return button

@@ -13,7 +13,6 @@
 		B758ADB729552C3D0071EB22 /* Session.swift in Sources */ = {isa = PBXBuildFile; fileRef = B758ADB629552C3D0071EB22 /* Session.swift */; };
 		B796F9E92948FFD700910A0A /* Shared.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B796F9E02948FFD600910A0A /* Shared.framework */; };
 		B796F9EE2948FFD700910A0A /* SharedTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B796F9ED2948FFD700910A0A /* SharedTests.swift */; };
-		B7A8993A297F08C300050EDF /* RemoteConfigValues.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7A89939297F08C300050EDF /* RemoteConfigValues.swift */; };
 		B7AA2DB92955D01C00E8F55A /* KeychainHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7AA2DB82955D01C00E8F55A /* KeychainHelper.swift */; };
 		B7EF647729B7A96700A372DF /* DesignSystem in Frameworks */ = {isa = PBXBuildFile; productRef = B7EF647629B7A96700A372DF /* DesignSystem */; };
 		BF88A75865EDD2CC5AAB7FEA /* Pods_Shared_SharedTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 378776A0879C9CAB09DC1714 /* Pods_Shared_SharedTests.framework */; };
@@ -40,7 +39,6 @@
 		B796F9E02948FFD600910A0A /* Shared.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Shared.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B796F9E82948FFD700910A0A /* SharedTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SharedTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B796F9ED2948FFD700910A0A /* SharedTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SharedTests.swift; sourceTree = "<group>"; };
-		B7A89939297F08C300050EDF /* RemoteConfigValues.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteConfigValues.swift; sourceTree = "<group>"; };
 		B7AA2DB82955D01C00E8F55A /* KeychainHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeychainHelper.swift; sourceTree = "<group>"; };
 		D257CBEBA9E328338D059FEE /* Pods-Shared-SharedTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Shared-SharedTests.debug.xcconfig"; path = "Target Support Files/Pods-Shared-SharedTests/Pods-Shared-SharedTests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -130,7 +128,6 @@
 			isa = PBXGroup;
 			children = (
 				B7AA2DB82955D01C00E8F55A /* KeychainHelper.swift */,
-				B7A89939297F08C300050EDF /* RemoteConfigValues.swift */,
 			);
 			path = Persistence;
 			sourceTree = "<group>";
@@ -188,7 +185,6 @@
 				B796F9E42948FFD700910A0A /* Sources */,
 				B796F9E52948FFD700910A0A /* Frameworks */,
 				B796F9E62948FFD700910A0A /* Resources */,
-				9A469748BA00D5BBB3AE0230 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -229,7 +225,7 @@
 			);
 			mainGroup = B796F9D62948FFD600910A0A;
 			packageReferences = (
-				B74704A1297076C8002A4980 /* XCRemoteSwiftPackageReference "lottie-ios" */,
+				B74704A1297076C8002A4980 /* XCRemoteSwiftPackageReference "lottie-ios.git" */,
 				B7EF647529B7A96700A372DF /* XCRemoteSwiftPackageReference "IOS-Design-System" */,
 			);
 			productRefGroup = B796F9E12948FFD600910A0A /* Products */;
@@ -282,23 +278,6 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		9A469748BA00D5BBB3AE0230 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Shared-SharedTests/Pods-Shared-SharedTests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Shared-SharedTests/Pods-Shared-SharedTests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Shared-SharedTests/Pods-Shared-SharedTests-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		A23DD17D11074999E29F0432 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -330,7 +309,6 @@
 			files = (
 				B758ADB729552C3D0071EB22 /* Session.swift in Sources */,
 				B7AA2DB92955D01C00E8F55A /* KeychainHelper.swift in Sources */,
-				B7A8993A297F08C300050EDF /* RemoteConfigValues.swift in Sources */,
 				B73A2FDC29494D5D002C08C9 /* CoordinatorProtocol.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -614,7 +592,7 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		B74704A1297076C8002A4980 /* XCRemoteSwiftPackageReference "lottie-ios" */ = {
+		B74704A1297076C8002A4980 /* XCRemoteSwiftPackageReference "lottie-ios.git" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/airbnb/lottie-ios.git";
 			requirement = {
@@ -635,7 +613,7 @@
 /* Begin XCSwiftPackageProductDependency section */
 		B74704A2297076C8002A4980 /* Lottie */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = B74704A1297076C8002A4980 /* XCRemoteSwiftPackageReference "lottie-ios" */;
+			package = B74704A1297076C8002A4980 /* XCRemoteSwiftPackageReference "lottie-ios.git" */;
 			productName = Lottie;
 		};
 		B7EF647629B7A96700A372DF /* DesignSystem */ = {

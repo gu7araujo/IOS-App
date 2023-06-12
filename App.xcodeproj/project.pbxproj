@@ -393,7 +393,6 @@
 				B796FA402949015500910A0A /* Embed Frameworks */,
 				B813BBE1E933541CC772C7EF /* [CP] Embed Pods Frameworks */,
 				B7FAA442294A509A00EE65C3 /* Linter */,
-				B7472A7229845D080043751A /* Firebase Crashlytics Script */,
 			);
 			buildRules = (
 			);
@@ -616,27 +615,6 @@
 			shellPath = /bin/sh;
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-App_QA/Pods-App_QA-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
-		};
-		B7472A7229845D080043751A /* Firebase Crashlytics Script */ = {
-			isa = PBXShellScriptBuildPhase;
-			alwaysOutOfDate = 1;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${DWARF_DSYM_FOLDER_PATH}/${DWARF_DSYM_FILE_NAME}/Contents/Resources/DWARF/${TARGET_NAME}",
-				"$(SRCROOT)/$(BUILT_PRODUCTS_DIR)/$(INFOPLIST_PATH)",
-			);
-			name = "Firebase Crashlytics Script";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/FirebaseCrashlytics/run\"\n";
 		};
 		B7FAA442294A509A00EE65C3 /* Linter */ = {
 			isa = PBXShellScriptBuildPhase;
