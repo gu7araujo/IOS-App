@@ -23,21 +23,6 @@ target :App_DEV do
   end
 end
 
-project 'App.xcodeproj'
-target :App_PROD do
-  project 'App'
-  use_frameworks!
-
-  shared_msal_pod
-end
-
-project 'App.xcodeproj'
-target :App_QA do
-  project 'App'
-  use_frameworks!
-
-  shared_msal_pod
-end
 
 project 'Shared/Shared.xcodeproj'
 target :Shared do
@@ -52,7 +37,9 @@ project 'Profile/Profile.xcodeproj'
 target :Profile do
   project 'Profile/Profile.xcodeproj'
   use_frameworks!
+
   shared_msal_pod
+
   target :ProfileTests do
   end
 end
