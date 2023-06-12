@@ -6,7 +6,7 @@ def shared_msal_pod
 end
 
 project 'App.xcodeproj'
-target :App_DEV do
+target :App do
   project 'App'
   use_frameworks!
 
