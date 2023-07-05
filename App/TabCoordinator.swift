@@ -79,6 +79,10 @@ class TabCoordinator: NSObject, TabCoordinatorProtocol {
         self.tabBarController = UITabBarController()
     }
 
+    deinit {
+        print("\(TabCoordinator.self) deinit")
+    }
+
     func start() {
         let pages: [TabBarPage] = [.home, .menu, .profile]
             .sorted(by: { $0.pageOrderNumber() < $1.pageOrderNumber() })
@@ -108,12 +112,15 @@ class TabCoordinator: NSObject, TabCoordinatorProtocol {
         switch page {
         case .home:
             let coordinator = MainCompositionRoot().buildHomeCoordinator(navController)
+            childCoordinators.append(coordinator)
             coordinator.start()
         case .menu:
             let coordinator = MainCompositionRoot().buildMenuCoordinator(navController)
+            childCoordinators.append(coordinator)
             coordinator.start()
         case .profile:
             let coordinator = MainCompositionRoot().buildProfileCoordinator(navController)
+            childCoordinators.append(coordinator)
             coordinator.start()
         }
 

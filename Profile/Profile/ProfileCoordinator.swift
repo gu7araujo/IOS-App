@@ -19,6 +19,10 @@ public class ProfileCoordinator: CoordinatorProtocol {
         self.navigationController = navigationController
     }
 
+    deinit {
+        print("\(ProfileCoordinator.self) deinit")
+    }
+
     public func start() {
         let profileViewController = ProfileCompositionRoot().buildProfileViewController()
         navigationController.pushViewController(profileViewController, animated: true)
