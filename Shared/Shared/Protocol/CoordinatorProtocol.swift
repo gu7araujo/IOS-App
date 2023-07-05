@@ -31,5 +31,5 @@ public protocol CoordinatorFinishDelegate: AnyObject {
 }
 
 public enum CoordinatorType {
-    case app, tab, home, menu, profile
+    case app, tab, home, menu, profile, demonstration
 }

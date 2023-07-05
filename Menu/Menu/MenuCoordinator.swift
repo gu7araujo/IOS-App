@@ -20,6 +20,10 @@ public class MenuCoordinator: CoordinatorProtocol {
         self.navigationController = navigationController
     }
 
+    deinit {
+        print("\(MenuCoordinator.self) deinit")
+    }
+
     public func start() {
         let childView = UIHostingController(rootView: MenuCompositionRoot().buildMenuView())        
         navigationController.pushViewController(childView, animated: true)

@@ -9,7 +9,13 @@ import UIKit
 import Shared
 import DesignSystem
 
+protocol HomeViewDelegate: AnyObject {
+    func navigateToDemonstration()
+}
+
 class HomeViewController: UIViewController {
+
+    weak var delegate: HomeViewDelegate?
 
     private lazy var tableView: UITableView = {
         let view = UITableView()
@@ -59,17 +65,25 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell: UITableViewCell?
-        if indexPath.row == 0 {
-            cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as? TableViewCellWithCollectionView
-        } else if indexPath.row == 1 {
-            cell = tableView.dequeueReusableCell(withIdentifier: "cellStack", for: indexPath) as? TableViewCellWithStackView
-        } else {
-            cell = tableView.dequeueReusableCell(withIdentifier: "cellButtons", for: indexPath) as? TableViewCellWithButtons
+        switch indexPath.row {
+        case 0:
+            let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as? TableViewCellWithCollectionView
+            return cell ?? UITableViewCell()
+        case 1:
+            let cell = tableView.dequeueReusableCell(withIdentifier: "cellStack", for: indexPath) as? TableViewCellWithStackView
+            return cell ?? UITableViewCell()
+        case 2:
+            let cell = tableView.dequeueReusableCell(withIdentifier: "cellButtons", for: indexPath) as? TableViewCellWithButtons
+            cell?.didSendEventClosure = { [weak self] event in
+                switch event {
+                case .button3Tap:
+                    self?.delegate?.navigateToDemonstration()
+                }
+            }
+            return cell ?? UITableViewCell()
+        default:
+            return UITableViewCell()
         }
-
-        cell?.selectionStyle = .none
-        return cell ?? UITableViewCell()
     }
 
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
@@ -213,6 +227,12 @@ class TableViewCellWithStackView: UITableViewCell {
 
 class TableViewCellWithButtons: UITableViewCell {
 
+    enum Event {
+        case button3Tap
+    }
+
+    public var didSendEventClosure: ((TableViewCellWithButtons.Event) -> Void)?
+
     private lazy var button1: UIButton = {
         let button = UIButton()
         button.setTitle("Botão X", for: .normal)
@@ -231,7 +251,7 @@ class TableViewCellWithButtons: UITableViewCell {
 
     private lazy var button3: UIButton = {
         let button = UIButton()
-        button.setTitle("Botão Z", for: .normal)
+        button.setTitle("Navigate", for: .normal)
         button.addTarget(self, action: #selector(button3Pressed), for: .touchUpInside)
         button.titleLabel?.font = Typography.h4.rawValue
         return button
@@ -246,7 +266,7 @@ class TableViewCellWithButtons: UITableViewCell {
     }
 
     @objc private func button3Pressed() {
-        fatalError("Crash")
+        didSendEventClosure?(.button3Tap)
     }
 
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {

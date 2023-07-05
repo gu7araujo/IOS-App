@@ -14,6 +14,10 @@
 		B796F9E92948FFD700910A0A /* Shared.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B796F9E02948FFD600910A0A /* Shared.framework */; };
 		B796F9EE2948FFD700910A0A /* SharedTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B796F9ED2948FFD700910A0A /* SharedTests.swift */; };
 		B7AA2DB92955D01C00E8F55A /* KeychainHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7AA2DB82955D01C00E8F55A /* KeychainHelper.swift */; };
+		B7C344CB2A559C4B00A4C918 /* DemonstrationCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7C344CA2A559C4B00A4C918 /* DemonstrationCoordinator.swift */; };
+		B7C344CD2A559CBE00A4C918 /* StartDemonstrationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7C344CC2A559CBE00A4C918 /* StartDemonstrationViewController.swift */; };
+		B7C344CF2A559DC400A4C918 /* SharedCompositionRoot.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7C344CE2A559DC400A4C918 /* SharedCompositionRoot.swift */; };
+		B7C344D12A55A68300A4C918 /* SecondDemonstrationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7C344D02A55A68300A4C918 /* SecondDemonstrationViewController.swift */; };
 		B7EF647729B7A96700A372DF /* DesignSystem in Frameworks */ = {isa = PBXBuildFile; productRef = B7EF647629B7A96700A372DF /* DesignSystem */; };
 		BF88A75865EDD2CC5AAB7FEA /* Pods_Shared_SharedTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 378776A0879C9CAB09DC1714 /* Pods_Shared_SharedTests.framework */; };
 /* End PBXBuildFile section */
@@ -40,6 +44,10 @@
 		B796F9E82948FFD700910A0A /* SharedTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SharedTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B796F9ED2948FFD700910A0A /* SharedTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SharedTests.swift; sourceTree = "<group>"; };
 		B7AA2DB82955D01C00E8F55A /* KeychainHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeychainHelper.swift; sourceTree = "<group>"; };
+		B7C344CA2A559C4B00A4C918 /* DemonstrationCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DemonstrationCoordinator.swift; sourceTree = "<group>"; };
+		B7C344CC2A559CBE00A4C918 /* StartDemonstrationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartDemonstrationViewController.swift; sourceTree = "<group>"; };
+		B7C344CE2A559DC400A4C918 /* SharedCompositionRoot.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SharedCompositionRoot.swift; sourceTree = "<group>"; };
+		B7C344D02A55A68300A4C918 /* SecondDemonstrationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondDemonstrationViewController.swift; sourceTree = "<group>"; };
 		D257CBEBA9E328338D059FEE /* Pods-Shared-SharedTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Shared-SharedTests.debug.xcconfig"; path = "Target Support Files/Pods-Shared-SharedTests/Pods-Shared-SharedTests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -109,9 +117,11 @@
 		B796F9E22948FFD600910A0A /* Shared */ = {
 			isa = PBXGroup;
 			children = (
+				B7C344C82A559C0500A4C918 /* Feature */,
 				B7AA2DB72955D00700E8F55A /* Persistence */,
 				B73A2FDA29494D47002C08C9 /* Protocol */,
 				B758ADB629552C3D0071EB22 /* Session.swift */,
+				B7C344CE2A559DC400A4C918 /* SharedCompositionRoot.swift */,
 			);
 			path = Shared;
 			sourceTree = "<group>";
@@ -130,6 +140,24 @@
 				B7AA2DB82955D01C00E8F55A /* KeychainHelper.swift */,
 			);
 			path = Persistence;
+			sourceTree = "<group>";
+		};
+		B7C344C82A559C0500A4C918 /* Feature */ = {
+			isa = PBXGroup;
+			children = (
+				B7C344C92A559C1300A4C918 /* Demonstration */,
+			);
+			path = Feature;
+			sourceTree = "<group>";
+		};
+		B7C344C92A559C1300A4C918 /* Demonstration */ = {
+			isa = PBXGroup;
+			children = (
+				B7C344CA2A559C4B00A4C918 /* DemonstrationCoordinator.swift */,
+				B7C344CC2A559CBE00A4C918 /* StartDemonstrationViewController.swift */,
+				B7C344D02A55A68300A4C918 /* SecondDemonstrationViewController.swift */,
+			);
+			path = Demonstration;
 			sourceTree = "<group>";
 		};
 		F957C0BC4D7000627DC8EF53 /* Frameworks */ = {
@@ -225,7 +253,7 @@
 			);
 			mainGroup = B796F9D62948FFD600910A0A;
 			packageReferences = (
-				B74704A1297076C8002A4980 /* XCRemoteSwiftPackageReference "lottie-ios.git" */,
+				B74704A1297076C8002A4980 /* XCRemoteSwiftPackageReference "lottie-ios" */,
 				B7EF647529B7A96700A372DF /* XCRemoteSwiftPackageReference "IOS-Design-System" */,
 			);
 			productRefGroup = B796F9E12948FFD600910A0A /* Products */;
@@ -307,9 +335,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B7C344CB2A559C4B00A4C918 /* DemonstrationCoordinator.swift in Sources */,
+				B7C344CF2A559DC400A4C918 /* SharedCompositionRoot.swift in Sources */,
 				B758ADB729552C3D0071EB22 /* Session.swift in Sources */,
 				B7AA2DB92955D01C00E8F55A /* KeychainHelper.swift in Sources */,
 				B73A2FDC29494D5D002C08C9 /* CoordinatorProtocol.swift in Sources */,
+				B7C344CD2A559CBE00A4C918 /* StartDemonstrationViewController.swift in Sources */,
+				B7C344D12A55A68300A4C918 /* SecondDemonstrationViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -592,7 +624,7 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		B74704A1297076C8002A4980 /* XCRemoteSwiftPackageReference "lottie-ios.git" */ = {
+		B74704A1297076C8002A4980 /* XCRemoteSwiftPackageReference "lottie-ios" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/airbnb/lottie-ios.git";
 			requirement = {
@@ -613,7 +645,7 @@
 /* Begin XCSwiftPackageProductDependency section */
 		B74704A2297076C8002A4980 /* Lottie */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = B74704A1297076C8002A4980 /* XCRemoteSwiftPackageReference "lottie-ios.git" */;
+			package = B74704A1297076C8002A4980 /* XCRemoteSwiftPackageReference "lottie-ios" */;
 			productName = Lottie;
 		};
 		B7EF647629B7A96700A372DF /* DesignSystem */ = {

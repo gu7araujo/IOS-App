@@ -9,7 +9,7 @@ import UIKit
 
 final class HomeCompositionRoot {
 
-    func buildHomeViewController() -> UIViewController {
+    func buildHomeViewController() -> HomeViewController {
         let view = HomeViewController()
         return view
     }

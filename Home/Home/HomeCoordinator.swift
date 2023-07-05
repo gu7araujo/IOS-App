@@ -19,9 +19,29 @@ public class HomeCoordinator: CoordinatorProtocol {
         self.navigationController = navigationController
     }
 
+    deinit {
+        print("\(HomeCoordinator.self) deinit")
+    }
+
     public func start() {
         let homeViewController = HomeCompositionRoot().buildHomeViewController()
+        homeViewController.delegate = self
         navigationController.pushViewController(homeViewController, animated: true)
     }
 
+}
+
+extension HomeCoordinator: HomeViewDelegate {
+    func navigateToDemonstration() {
+        let demonstrationCoordinator = SharedCompositionRoot().buildDemonstrationCoordinator(navigationController)
+        demonstrationCoordinator.finishDelegate = self
+        demonstrationCoordinator.start()
+        childCoordinators.append(demonstrationCoordinator)
+    }
+}
+
+extension HomeCoordinator: CoordinatorFinishDelegate {
+    public func coordinatorDidFinish(childCoordinator: CoordinatorProtocol) {
+        childCoordinators = childCoordinators.filter({ $0.type != childCoordinator.type })
+    }
 }

@@ -19,6 +19,10 @@ class AppCoordinator: CoordinatorProtocol {
         self.navigationController = navigationController
     }
 
+    deinit {
+        print("\(AppCoordinator.self) deinit")
+    }
+
     func start() {
         let tabCoordinator = MainCompositionRoot().buildTabCoordinator(navigationController)
         tabCoordinator.finishDelegate = self
