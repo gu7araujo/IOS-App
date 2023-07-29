@@ -8,12 +8,19 @@
 import UIKit
 import Shared
 
+public protocol HomeCoordinatorDelegate: AnyObject {
+    func increaseBadge()
+    func decreaseBadge()
+}
+
 public class HomeCoordinator: CoordinatorProtocol {
 
     weak public var finishDelegate: CoordinatorFinishDelegate?
     public var navigationController: UINavigationController
     public var childCoordinators: [CoordinatorProtocol] = []
     public var type: CoordinatorType = .home
+
+    public weak var delegate: HomeCoordinatorDelegate?
 
     public required init(_ navigationController: UINavigationController) {
         self.navigationController = navigationController
@@ -32,6 +39,14 @@ public class HomeCoordinator: CoordinatorProtocol {
 }
 
 extension HomeCoordinator: HomeViewDelegate {
+    func addItem() {
+        delegate?.increaseBadge()
+    }
+
+    func removeItem() {
+        delegate?.decreaseBadge()
+    }
+
     func navigateToDemonstration() {
         let demonstrationCoordinator = SharedCompositionRoot().buildDemonstrationCoordinator(navigationController)
         demonstrationCoordinator.finishDelegate = self

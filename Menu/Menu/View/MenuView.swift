@@ -14,13 +14,13 @@ struct MenuView: View {
                 NavigationLink {
                     View1()
                 } label: {
-                    Text("Screen 1")
+                    Text("SwiftUI Screen 1")
                 }
 
                 NavigationLink {
                     View2()
                 } label: {
-                    Text("Screen 2")
+                    Text("SwiftUI Screen 2")
                 }
             }
             .navigationBarHidden(true)
