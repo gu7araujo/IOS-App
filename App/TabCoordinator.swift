@@ -10,6 +10,16 @@ import Shared
 import Home
 import Menu
 import Profile
+import Combine
+
+protocol TabCoordinatorProtocol: CoordinatorProtocol {
+    var tabBarController: UITabBarController { get set }
+    var badgeValue: Int { get set }
+
+    func selectPage(_ page: TabBarPage)
+    func setSelectedIndex(_ index: Int)
+    func currentPage() -> TabBarPage?
+}
 
 enum TabBarPage {
     case home
@@ -58,14 +68,6 @@ enum TabBarPage {
     // etc
 }
 
-protocol TabCoordinatorProtocol: CoordinatorProtocol {
-    var tabBarController: UITabBarController { get set }
-
-    func selectPage(_ page: TabBarPage)
-    func setSelectedIndex(_ index: Int)
-    func currentPage() -> TabBarPage?
-}
-
 class TabCoordinator: NSObject, TabCoordinatorProtocol {
 
     var tabBarController: UITabBarController
@@ -73,6 +75,8 @@ class TabCoordinator: NSObject, TabCoordinatorProtocol {
     var navigationController: UINavigationController
     var childCoordinators: [CoordinatorProtocol] = []
     var type: CoordinatorType = .tab
+
+    var badgeValue = 0
 
     required init(_ navigationController: UINavigationController) {
         self.navigationController = navigationController
@@ -98,6 +102,7 @@ class TabCoordinator: NSObject, TabCoordinatorProtocol {
         tabBarController.selectedIndex = TabBarPage.home.pageOrderNumber()
         tabBarController.tabBar.backgroundColor = .lightGray
         tabBarController.tabBar.tintColor = .white
+        tabBarController.tabBar.items?[0].badgeValue = "\(badgeValue)"
         navigationController.viewControllers = [tabBarController]
     }
 
@@ -112,6 +117,7 @@ class TabCoordinator: NSObject, TabCoordinatorProtocol {
         switch page {
         case .home:
             let coordinator = MainCompositionRoot().buildHomeCoordinator(navController)
+            coordinator.delegate = self
             childCoordinators.append(coordinator)
             coordinator.start()
         case .menu:
@@ -145,5 +151,18 @@ extension TabCoordinator: UITabBarControllerDelegate {
     func tabBarController(_ tabBarController: UITabBarController,
                           didSelect viewController: UIViewController) {
         // Some implementation
+    }
+}
+
+extension TabCoordinator: HomeCoordinatorDelegate {
+    func increaseBadge() {
+        badgeValue += 1
+        tabBarController.tabBar.items?[0].badgeValue = "\(badgeValue)"
+    }
+
+    func decreaseBadge() {
+        if badgeValue == 0 { return }
+        badgeValue -= 1
+        tabBarController.tabBar.items?[0].badgeValue = "\(badgeValue)"
     }
 }
