@@ -61,11 +61,27 @@ enum TabBarPage {
         }
     }
 
-    // Add tab icon value
+    func pageIcon() -> UIImage? {
+        switch self {
+        case .home:
+            return UIImage(named: "home")
+        case .menu:
+            return UIImage(named: "menu")
+        case .profile:
+            return UIImage(named: "profile")
+        }
+    }
 
-    // Add tab icon selected / deselected color
-
-    // etc
+    func pageSelectedIcon() -> UIImage? {
+        switch self {
+        case .home:
+            return UIImage(named: "homeSelected")
+        case .menu:
+            return UIImage(named: "menuSelected")
+        case .profile:
+            return UIImage(named: "profileSelected")
+        }
+    }
 }
 
 class TabCoordinator: NSObject, TabCoordinatorProtocol {
@@ -110,9 +126,10 @@ class TabCoordinator: NSObject, TabCoordinatorProtocol {
         let navController = UINavigationController()
         navController.setNavigationBarHidden(true, animated: false)
 
-        navController.tabBarItem = UITabBarItem.init(title: page.pageTitleValue(),
-                                                     image: nil,
-                                                     tag: page.pageOrderNumber())
+        navController.tabBarItem = UITabBarItem(title: page.pageTitleValue(),
+                                                image: page.pageIcon(),
+                                                selectedImage: page.pageSelectedIcon())
+        navController.tabBarItem.tag = page.pageOrderNumber()
 
         switch page {
         case .home:
