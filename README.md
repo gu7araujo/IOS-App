@@ -15,4 +15,4 @@
 ### GitHub Actions
 
 ## Authentication
-### Azure AD B2c
+### Azure AD B2C
